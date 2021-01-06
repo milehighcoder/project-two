@@ -6,6 +6,19 @@
 
 Managers are often tasked with creating schedules for their team of employees on a weekly or bi-weekly basis. This application accomplishes two things. It makes it easy for managers to create and manage their employee's schedules. It also allows employees to view their schedules, clock in and out, request a schedule change, and request vacation time. 
 
+## Project Requirements
+
+* Must use a Node and Express web server.
+* Must use Handlebars.js as the template engine.
+* Must be backed by a MySQL database with a Sequelize ORM.
+* Must have both GET and POST routes for retrieving and adding new data.
+* Must be deployed using Heroku (with data).
+* Must utilize at least one new library, package, or technology that hasn't been covered in class.
+* Must have a polished Front End/User Interface.
+* Must have a folder structure that meets the MVC paradigm.
+* Must meet good quality coding standards (indentation, scoping, naming, etc.).
+* Must protect API keys in Node with environment variables.
+
 ## Table of Contents
 
 * [Installation](#installation)

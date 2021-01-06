@@ -21,11 +21,37 @@ Managers are often tasked with creating schedules for their team of employees on
 
 ## Table of Contents
 
+* [Development Process](#development-process)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 * [Questions](#questions)
+
+## Development Process
+
+PHASE 1
+
+Homepage
+
+* Clock-in and clock-out
+* Manager and Employee login authentication
+* Create new manager and employee accounts and receive email confirmation
+
+Manager Portal
+
+* View upcoming shifts
+* Update profile information
+* Create new employee schedule
+* Update employee schedule
+* Delete employee schedule
+
+Employee Portal
+
+* View upcoming schedule
+* Update profile information
+* Request schedule change
+* Request vacation time
 
 ## Installation
 

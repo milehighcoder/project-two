@@ -1,1 +1,0 @@
-CREATE DATABASE hotel_schedulerDB;

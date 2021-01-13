@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="md-tabs">
+    <div class="mobile-nav-bar title-bar">
+      <div class="title-bar-center">
+        <span class="title-bar-text">
+          <img src="assets/img/when-we-clean-logo.png" alt="" class="imgHead">
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row columns">
+    <div class="columns large-4">
+
+      <!-- Time Card -->
+      <div class="translucent-form-overlay">
+        <form class="form-wrapper-time-card">
+          <div>
+            <h3>Time Card</h3>
+            <p id="date-time-card">January 13, 2021</p>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline">Start:</label>
+                </div>
+                <div class="columns">
+                  <input type="time" id="right-label" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline">End:</label>
+                </div>
+                <div class="columns">
+                  <input type="time" id="right-label" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <a id="clock-in-button" class="button button-rounded-hover">
+            <h4>IN</h4>
+          </a>
+          <a id="clock-out-button" class="button button-rounded-hover">
+            <h4>Out</h4>
+          </a>
+        </div>
+      </div>
+      <br>
+
+      <!-- Manage Team -->
+      <div class="translucent-form-overlay">
+        <form>
+          <h3>Manage Team</h3>
+          <br>
+          <div class="row columns">
+            <a class="button button-rounded-hover">View Team</a>
+          </div>
+          <div class="row columns">
+            <a class="button button-rounded-hover">Create New Schedule</a>
+          </div>
+          <div class="row columns">
+            <a class="button button-rounded-hover">Update Current Schedule</a>
+          </div>
+          <div class="row columns">
+            <a class="button button-rounded-hover">Delete Schedule</a>
+          </div>
+        </form>
+      </div>
+      <BR>
+      <!-- Profile Information -->
+      <div class="translucent-form-overlay">
+        <form>
+          <h3>Profile Information</h3>
+          <div class="row columns">
+            <label>Name
+              <input type="text" name="keyword" placeholder="Any">
+            </label>
+          </div>
+          <div class="row columns">
+            <label>Contact Information
+              <input type="text" name="keyword" placeholder="Any">
+            </label>
+          </div>
+          <div class="row columns">
+            <label>Account
+              <input type="text" name="keyword" placeholder="Any">
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="columns large-8">
+
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+
+      <table>
+        <tr>
+          <th class="emp-name">Employee</th>
+          <th class="day-name">Sun</th>
+          <th class="day-name">Mon</th>
+          <th class="day-name">Tue</th>
+          <th class="day-name">Wed</th>
+          <th class="day-name">Thu</th>
+          <th class="day-name">Fri</th>
+          <th class="day-name">Sat</th>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Tom</span></td>
+          <td class="day"><span class="number">31</span></td>
+          <td class="day"><span class="number">1</span><span class="event"></span><span class="event"></span></td>
+          <td class="day"><span class="number">2</span></td>
+          <td class="day"><span class="number">3</span><span class="event event-multiday-start"></span></td>
+          <td class="day"><span class="number">4</span><span class="event event-multiday"></span><span
+              class="event event-multiday-start eventclass" style="background-color:#5a9ab2;"></span><span
+              class="event"></td>
+          <td class="day"><span class="number">5</span><span class="event event-multiday-finish"></span><span
+              class="event event-multiday eventclass" style="background-color:#5a9ab2;"></span></td>
+          <td class="day"><span class="number">6</span><span class="event event-ghost"></span><span
+              class="event event-multiday-finish eventclass" style="background-color:#5a9ab2;"></span></td>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Merisa</span></td>
+          <td class="day"><span class="number">7</span></td>
+          <td class="day"><span class="number">8</span><span class="event"></span></td>
+          <td class="day"><span class="number">9</span></td>
+          <td class="day"><span class="number">10</span></td>
+          <td class="day"><span class="number">11</span></td>
+          <td class="day"><span class="number">12</span></td>
+          <td class="day"><span class="number">13</span></td>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Sam</span></td>
+          <td class="day"><span class="number">14</span></td>
+          <td class="day"><span class="number">15</span></td>
+          <td class="day"><span class="number">16</span><span class="event"></span></td>
+          <td class="day"><span class="number">17</span><span class="event"></span></td>
+          <td class="day"><span class="number">18</span></td>
+          <td class="day"><span class="number">19</span></td>
+          <td class="day"><span class="number">20</span></td>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Jeff</span></td>
+          <td class="day"><span class="number">21</span></td>
+          <td class="day"><span class="number">22</span></td>
+          <td class="day"><span class="number">23</span></td>
+          <td class="day"><span class="number">24</span></td>
+          <td class="day"><span class="number">25</span></td>
+          <td class="day"><span class="number">26</span></td>
+          <td class="day"><span class="number">27</span><span class="event event-multiday-start"
+              style="background-color:#da5f5f;"></td>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Sarah</span></td>
+          <td class="day"><span class="number">28</span><span class="event event-multiday"
+              style="background-color:#da5f5f;"></td>
+          <td class="day today"><span class="number">29</span><span class="event event-multiday-finish"
+              style="background-color:#da5f5f;"></td>
+          <td class="day"><span class="number">30</span></td>
+          <td class="day"><span class="number">1</span></td>
+          <td class="day"><span class="number">2</span></td>
+          <td class="day"><span class="number">3</span></td>
+          <td class="day"><span class="number">4</span></td>
+        </tr>
+        <tr>
+          <td class="emp"><span class="number">Steve</span></td>
+          <td class="day"><span class="number">5</span></td>
+          <td class="day"><span class="number">6</span><span class="event"></span></td>
+          <td class="day"><span class="number">7</span></td>
+          <td class="day"><span class="number">8</span></td>
+          <td class="day"><span class="number">9</span></td>
+          <td class="day"><span class="number">10</span></td>
+          <td class="day"><span class="number">11</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

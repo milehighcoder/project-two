@@ -2,6 +2,18 @@ body {
   background-color: black;
 }
 
+h3 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 21px;
+}
+
 .md-tabs > .mobile-nav-bar {
   background-color: rgba(54, 54, 54, 0.8);
   margin-bottom: 15px;
@@ -46,9 +58,11 @@ td {
   padding: 1.5% 0;
   height: 75px;
 }
+
 .emp {
   color: black;
 }
+
 .day:hover {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -70,6 +84,43 @@ span.number {
   position: relative;
 }
 
+/* Sidebar Menu */
+.form-wrapper-time-card {
+  padding: 10px;
+}
+
+#date-time-card {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  color: rgb(179, 179, 179);
+}
+
+#time-field {
+  border-radius: 10px;
+  margin-top: -20px;
+}
+
+.form-inline {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#clock-in-button {
+  background-color: #33a853;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+#clock-out-button {
+  background-color: #ea4335;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
 .translucent-form-overlay {
   max-width: 300px;
   width: 100%;
@@ -77,7 +128,7 @@ span.number {
   padding: 20px;
   color: #fefefe;
   text-align: center;
-  border-radius: 5%;
+  border-radius:5px;
 }
 
 .translucent-form-overlay .columns.row {
@@ -107,14 +158,9 @@ span.number {
 }
 
 .button-rounded-hover {
-  border: 0;
-  border-radius: 5000px;
-  padding: 1rem 2rem;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  font-size: 1rem;
-  letter-spacing: 2px;
   transition: all 0.35s ease;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -138,18 +184,12 @@ span.number {
 
 .button-rounded-hover:after {
   position: absolute;
-  top: 0px;
+  top: 30px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   content: "";
   border-radius: inherit;
-}
-#green {
-  background-color: #00ff22;
-}
-#red {
-  background-color: #ff0000;
 }
 
 .button-rounded-hover:hover:before,

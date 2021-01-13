@@ -1,12 +1,12 @@
 body {
   background-color: black;
 }
-​ .md-tabs > .mobile-nav-bar {
+​.md-tabs > .mobile-nav-bar {
   background-color: rgba(54, 54, 54, 0.8);
   margin-bottom: 15px;
   padding: 0 !important;
 }
-​ table {
+​table {
   width: 100%;
   box-sizing: border-box;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
@@ -16,12 +16,12 @@ body {
   float: right;
   border-radius: 5% !important;
 }
-​ th,
+​th,
 td {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
 }
-​ th {
+​th {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 700;
@@ -30,7 +30,7 @@ td {
   background-color: #292929;
   letter-spacing: 1px;
 }
-​ td {
+​td {
   transition: all 0.3s;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
@@ -48,20 +48,20 @@ td {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-​ .today {
+​.today {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
-​ span.number {
+​span.number {
   margin-left: 10%;
 }
-​ .imgHead {
+​.imgHead {
   height: 90px;
   transform: translateX(-50%);
   left: 50%;
   position: relative;
 }
-​ .translucent-form-overlay {
+​.translucent-form-overlay {
   max-width: 300px;
   width: 100%;
   background-color: rgba(54, 54, 54, 0.8);
@@ -70,27 +70,27 @@ td {
   text-align: center;
   border-radius: 5%;
 }
-​ .translucent-form-overlay .columns.row {
+​.translucent-form-overlay .columns.row {
   display: block;
 }
-​ .translucent-form-overlay h3,
+​.translucent-form-overlay h3,
 .translucent-form-overlay label {
   color: #fefefe;
 }
-​ .translucent-form-overlay input,
+​.translucent-form-overlay input,
 .translucent-form-overlay select {
   color: #8a8a8a;
 }
-​ .translucent-form-overlay input::-webkit-input-placeholder {
+​.translucent-form-overlay input::-webkit-input-placeholder {
   color: #8a8a8a;
 }
-​ .translucent-form-overlay input:-ms-input-placeholder {
+​.translucent-form-overlay input:-ms-input-placeholder {
   color: #8a8a8a;
 }
-​ .translucent-form-overlay input::placeholder {
+​.translucent-form-overlay input::placeholder {
   color: #8a8a8a;
 }
-​ .button-rounded-hover {
+​.button-rounded-hover {
   border: 0;
   border-radius: 5000px;
   padding: 1rem 2rem;
@@ -103,7 +103,7 @@ td {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-​ .button-rounded-hover:before {
+​.button-rounded-hover:before {
   opacity: 0;
   content: "";
   position: absolute;
@@ -118,7 +118,7 @@ td {
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-​ .button-rounded-hover:after {
+​.button-rounded-hover:after {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -133,7 +133,7 @@ td {
 #red {
   background-color: #ff0000;
 }
-​ .button-rounded-hover:hover:before,
+​.button-rounded-hover:hover:before,
 .button-rounded-hover:focus:before {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);

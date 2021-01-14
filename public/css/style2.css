@@ -14,6 +14,16 @@ h4 {
   font-size: 21px;
 }
 
+.gray-subtitle-text{
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: rgb(179, 179, 179);
+}
+
+#my-profile-card {
+  margin-bottom: 25px;
+}
+
 .md-tabs > .mobile-nav-bar {
   background-color: rgba(54, 54, 54, 0.8);
   margin-bottom: 15px;
@@ -84,15 +94,8 @@ span.number {
   position: relative;
 }
 
-/* Sidebar Menu */
 .form-wrapper-time-card {
   padding: 10px;
-}
-
-#date-time-card {
-  margin-top: -20px;
-  margin-bottom: 20px;
-  color: rgb(179, 179, 179);
 }
 
 #time-field {
@@ -120,6 +123,21 @@ span.number {
   width: 100px;
   margin-top: 10px;
 }
+
+.manage-team-button-wrapper {
+  padding-left: 60px;
+}
+
+.manage-team-button-stack {
+  background-color: #4385F4;
+  height: 40px;
+  margin-top: -10px;
+  width: 170px;
+  
+  font-size: 14px;
+}
+
+/* Gray Sidebar Card Styling */
 
 .translucent-form-overlay {
   max-width: 300px;
@@ -157,8 +175,9 @@ span.number {
   color: #8a8a8a;
 }
 
+/* Button Hover Effects */
+
 .button-rounded-hover {
-  text-transform: uppercase;
   position: relative;
   overflow: hidden;
   transition: all 0.35s ease;
@@ -199,3 +218,4 @@ span.number {
   transform: translateX(0%);
   opacity: 0.5;
 }
+

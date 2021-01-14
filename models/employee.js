@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         wednesday: DataTypes.BOOLEAN,
         thursday: DataTypes.BOOLEAN,
         friday: DataTypes.BOOLEAN,
-        satday: DataTypes.BOOLEAN,
+        saturday: DataTypes.BOOLEAN,
         sunday: DataTypes.BOOLEAN,
     });
     return Employee;

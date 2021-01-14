@@ -20,6 +20,10 @@ h4 {
   color: rgb(179, 179, 179);
 }
 
+#my-profile-card {
+  margin-bottom: 25px;
+}
+
 .md-tabs > .mobile-nav-bar {
   background-color: rgba(54, 54, 54, 0.8);
   margin-bottom: 15px;
@@ -126,10 +130,11 @@ span.number {
 
 .manage-team-button-stack {
   background-color: #4385F4;
-  height: 50px;
+  height: 40px;
+  margin-top: -10px;
   width: 170px;
-  margin-top: 10px;
-  font-size: 18px;
+  
+  font-size: 14px;
 }
 
 /* Gray Sidebar Card Styling */

@@ -28,7 +28,7 @@
         <form class="form-wrapper-time-card">
           <div>
             <h3>Time Card</h3>
-            <p id="date-time-card">January 13, 2021</p>
+            <p class="gray-subtitle-text">January 13, 2021</p>
           </div>
           <div class="row">
             <div class="grid-x small-x">
@@ -64,50 +64,39 @@
           </a>
         </div>
       </div>
+      
       <br>
 
-      <!-- Manage Team -->
+      <!-- Manage Team Card -->
       <div class="translucent-form-overlay">
-        <form>
+        <div>
           <h3>Manage Team</h3>
-          <br>
-          <div class="row columns">
-            <a class="button button-rounded-hover">View Team</a>
-          </div>
-          <div class="row columns">
-            <a class="button button-rounded-hover">Create New Schedule</a>
-          </div>
-          <div class="row columns">
-            <a class="button button-rounded-hover">Update Current Schedule</a>
-          </div>
-          <div class="row columns">
-            <a class="button button-rounded-hover">Delete Schedule</a>
-          </div>
-        </form>
+          <p class="gray-subtitle-text">Manager Team Name</p>
+        </div>
+        <div class="column row manage-team-button-wrapper">
+          <a id="view-team-button" class="button button-rounded-hover manage-team-button-stack">View Shifts</a>
+          <a id="create-shift-button" class="button button-rounded-hover manage-team-button-stack">Create Shift</a>
+          <a id="update-shift-button" class="button button-rounded-hover manage-team-button-stack">Update Shift</a>
+          <a id="delete-shift-button" class="button button-rounded-hover manage-team-button-stack">Delete Shift</a>
+        </div>
       </div>
-      <BR>
-      <!-- Profile Information -->
+
+      <br>
+
+      <!-- My Profile Card -->
       <div class="translucent-form-overlay">
-        <form>
-          <h3>Profile Information</h3>
-          <div class="row columns">
-            <label>Name
-              <input type="text" name="keyword" placeholder="Any">
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Contact Information
-              <input type="text" name="keyword" placeholder="Any">
-            </label>
-          </div>
-          <div class="row columns">
-            <label>Account
-              <input type="text" name="keyword" placeholder="Any">
-            </label>
-          </div>
-        </form>
+        <div>
+          <h3>My Profile</h3>
+          <p class="gray-subtitle-text">Manager Name</p>
+        </div>
+        <div class="column row manage-team-button-wrapper">
+          <a id="update-profile-button" class="button button-rounded-hover manage-team-button-stack">Update</a>
+        </div>
       </div>
     </div>
+
+    <!-- Calendar -->
+
     <div class="columns large-8">
 
       <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>

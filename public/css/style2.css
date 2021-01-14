@@ -14,6 +14,26 @@ h4 {
   font-size: 21px;
 }
 
+.cell-morning-shift {
+  color: white;
+  background-color: #01a1f1;
+}
+
+.cell-swing-shift {
+  color: white;
+  background-color: #33a853;
+}
+
+.cell-night-shift {
+  color: white;
+  background-color: #f65314;
+}
+
+.cell-off-day {
+  color: gray;
+  background-color: rgb(221, 221, 221);
+}
+
 .gray-subtitle-text {
   margin-top: -20px;
   margin-bottom: 20px;

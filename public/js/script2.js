@@ -48,6 +48,7 @@ function resetTimer() {
   h = "";
   m = "";
   s = "";
+  console.log(timer)
 }
 function countTimer() {
   secs++;

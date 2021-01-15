@@ -1,6 +1,7 @@
 const db = require("../models");
 
 module.exports = function (app) {
+
   // GET route for getting all of the employees
   app.get("/api/schedule", (req, res) => {
     console.log(req.body);
@@ -30,6 +31,7 @@ module.exports = function (app) {
       },
     }).then((result) => res.json(result));
   });
+
 
   // PUT route for updating todos. We can get the updated todo data from req.body
   app.put("/api/schedule", (req, res) => {

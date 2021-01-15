@@ -39,30 +39,16 @@
             <div class="grid-x small-x">
               <div class="row">
                 <div class="small-2 columns">
-                  <label for="right-label" class="right inline">Start:</label>
                 </div>
                 <div class="columns">
-                  <input type="time" id="right-label" placeholder="">
+                  <h1 id="timer">00:00:00</h1>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline">End:</label>
-                </div>
-                <div class="columns">
-                  <input type="time" id="right-label" placeholder="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
         <div class="row">
-          <a id="clock-in-button" class="button button-rounded-hover"><h4>IN</h4></a>
-          <a id="clock-out-button" class="button button-rounded-hover"><h4>Out</h4></a>
+          <a id="clock-in-button" class="button button-rounded-hover"onclick="startTimer(this)"><h4>IN</h4></a>
+          <a id="clock-out-button" class="button button-rounded-hover"onclick="stopTimer()"><h4>Out</h4></a>
         </div>
       </div>
       

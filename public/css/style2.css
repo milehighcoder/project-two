@@ -5,6 +5,7 @@ body {
 h3 {
   font-size: 21px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 h4 {
@@ -12,6 +13,41 @@ h4 {
   margin-top: 20px;
   font-weight: bold;
   font-size: 21px;
+}
+
+.white-text {
+  color: white;
+}
+
+.cell-morning-shift {
+  color: white;
+  background-color: #01a1f1;
+}
+
+.cell-swing-shift {
+  color: white;
+  background-color: #33a853;
+}
+
+.cell-night-shift {
+  color: white;
+  background-color: #f65314;
+}
+
+.cell-off-day {
+  color: gray;
+  background-color: rgb(221, 221, 221);
+}
+
+.gray-subtitle-text {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: rgb(179, 179, 179);
+  text-align: center;
+}
+
+#my-profile-card {
+  margin-bottom: 25px;
 }
 
 .md-tabs > .mobile-nav-bar {
@@ -84,15 +120,8 @@ span.number {
   position: relative;
 }
 
-/* Sidebar Menu */
 .form-wrapper-time-card {
   padding: 10px;
-}
-
-#date-time-card {
-  margin-top: -20px;
-  margin-bottom: 20px;
-  color: rgb(179, 179, 179);
 }
 
 #time-field {
@@ -121,6 +150,20 @@ span.number {
   margin-top: 10px;
 }
 
+.manage-team-button-wrapper {
+  padding-left: 60px;
+}
+
+.manage-team-button-stack {
+  background-color: #4385f4;
+  height: 40px;
+  margin-top: -10px;
+  width: 170px;
+  font-size: 14px;
+}
+
+/* Gray Sidebar Card Styling */
+
 .translucent-form-overlay {
   max-width: 300px;
   width: 100%;
@@ -128,7 +171,7 @@ span.number {
   padding: 20px;
   color: #fefefe;
   text-align: center;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .translucent-form-overlay .columns.row {
@@ -157,8 +200,9 @@ span.number {
   color: #8a8a8a;
 }
 
+/* Button Hover Effects */
+
 .button-rounded-hover {
-  text-transform: uppercase;
   position: relative;
   overflow: hidden;
   transition: all 0.35s ease;
@@ -198,4 +242,66 @@ span.number {
   -ms-transform: translateX(0%);
   transform: translateX(0%);
   opacity: 0.5;
+}
+
+/* MODAL */
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Content/Box */
+.modal-content {
+  background-color: rgba(54, 54, 54, 1);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 80%; /* Could be more or less, depending on screen size */
+  color: white;
+}
+
+/* Close Button */
+.close {
+  color: rgb(253, 253, 253);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-form-overlay {
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  
+  color: #fefefe;
+  border-radius: 5px;
+}
+
+.modal-submit-button {
+  background-color: #4385f4;
+  height: 40px;
+  margin-top: 40px;
+  width: 170px;
+  font-size: 14px;
+}
+
+.modal-wrapper {
+  text-align: center;
 }

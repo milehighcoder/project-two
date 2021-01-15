@@ -16,7 +16,7 @@ module.exports = function (app) {
     console.log(req.body);
     // Write code here to retrieve all of the todos from the database and res.json them back to the user
       db.Employee.findOne({
-          where: 
+          where: req.params.id, 
       }).then((result) => res.json(result));
   });
 

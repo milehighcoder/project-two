@@ -2,9 +2,9 @@ module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define("Employee", {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
-    // email: DataTypes.STRING,
-    // phone: DataTypes.INTEGER,
-    monday: DataTypes.BOOLEAN,
+    email: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    monday_start: DataTypes.BOOLEAN,
     tuesday: DataTypes.BOOLEAN,
     wednesday: DataTypes.BOOLEAN,
     thursday: DataTypes.BOOLEAN,

@@ -14,6 +14,36 @@ h4 {
   font-size: 21px;
 }
 
+.cell-morning-shift {
+  color: white;
+  background-color: #01a1f1;
+}
+
+.cell-swing-shift {
+  color: white;
+  background-color: #33a853;
+}
+
+.cell-night-shift {
+  color: white;
+  background-color: #f65314;
+}
+
+.cell-off-day {
+  color: gray;
+  background-color: rgb(221, 221, 221);
+}
+
+.gray-subtitle-text {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: rgb(179, 179, 179);
+}
+
+#my-profile-card {
+  margin-bottom: 25px;
+}
+
 .md-tabs > .mobile-nav-bar {
   background-color: rgba(54, 54, 54, 0.8);
   margin-bottom: 15px;
@@ -84,15 +114,8 @@ span.number {
   position: relative;
 }
 
-/* Sidebar Menu */
 .form-wrapper-time-card {
   padding: 10px;
-}
-
-#date-time-card {
-  margin-top: -20px;
-  margin-bottom: 20px;
-  color: rgb(179, 179, 179);
 }
 
 #time-field {
@@ -121,6 +144,21 @@ span.number {
   margin-top: 10px;
 }
 
+.manage-team-button-wrapper {
+  padding-left: 60px;
+}
+
+.manage-team-button-stack {
+  background-color: #4385f4;
+  height: 40px;
+  margin-top: -10px;
+  width: 170px;
+
+  font-size: 14px;
+}
+
+/* Gray Sidebar Card Styling */
+
 .translucent-form-overlay {
   max-width: 300px;
   width: 100%;
@@ -128,7 +166,7 @@ span.number {
   padding: 20px;
   color: #fefefe;
   text-align: center;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .translucent-form-overlay .columns.row {
@@ -157,8 +195,9 @@ span.number {
   color: #8a8a8a;
 }
 
+/* Button Hover Effects */
+
 .button-rounded-hover {
-  text-transform: uppercase;
   position: relative;
   overflow: hidden;
   transition: all 0.35s ease;

@@ -19,14 +19,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Routes
 const exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main1" }));
-app.set("view engine", "handlebars");
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 
 require("./routes/authRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
+
+
+app.get('/',(req, res) => {
+  res.render('index1');
+});
+
+app.get('/Portal',(req, res) => {
+  res.render('index2');
+});
+
+
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {

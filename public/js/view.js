@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const deleteBtn = document.getElementById('delete-shift-button');
 
     const displaySchedules = (schedules) => {
-        console.log("displaying schedules: " + JSON.parse(schedules));
+        console.log("displaying schedules: " + schedules);
         const newTableRow = document.createElement('tr');
         const newEmpCell = document.createElement('td');
         const newDayCell = document.createElement('td');

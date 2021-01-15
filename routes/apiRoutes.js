@@ -2,13 +2,13 @@ const db = require('../models');
 
 module.exports = function (app) {
     // GET route for getting all of the employees
-    app.get('/api/schedule', (req, res) => {
+    app.get('/portal/api/schedule', (req, res) => {
         console.log(req.body)
 
         db.Employee.findAll().then((result) => res.json(result));
     });
 
-    app.post('/api/schedule', (req, res) => {
+    app.post('/portal/api/schedule', (req, res) => {
         db.Employee.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,

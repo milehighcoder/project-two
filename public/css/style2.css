@@ -5,6 +5,7 @@ body {
 h3 {
   font-size: 21px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 h4 {
@@ -12,6 +13,10 @@ h4 {
   margin-top: 20px;
   font-weight: bold;
   font-size: 21px;
+}
+
+.white-text {
+  color: white;
 }
 
 .cell-morning-shift {
@@ -38,6 +43,7 @@ h4 {
   margin-top: -20px;
   margin-bottom: 20px;
   color: rgb(179, 179, 179);
+  text-align: center;
 }
 
 #my-profile-card {
@@ -153,7 +159,6 @@ span.number {
   height: 40px;
   margin-top: -10px;
   width: 170px;
-
   font-size: 14px;
 }
 
@@ -237,4 +242,66 @@ span.number {
   -ms-transform: translateX(0%);
   transform: translateX(0%);
   opacity: 0.5;
+}
+
+/* MODAL */
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Content/Box */
+.modal-content {
+  background-color: rgba(54, 54, 54, 1);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 80%; /* Could be more or less, depending on screen size */
+  color: white;
+}
+
+/* Close Button */
+.close {
+  color: rgb(253, 253, 253);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-form-overlay {
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  
+  color: #fefefe;
+  border-radius: 5px;
+}
+
+.modal-submit-button {
+  background-color: #4385f4;
+  height: 40px;
+  margin-top: 40px;
+  width: 170px;
+  font-size: 14px;
+}
+
+.modal-wrapper {
+  text-align: center;
 }

@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
       .then((data) => {
         const {
           token,
-          user: { isManager },
+          // user: { isManager },
+          
         } = data;
         localStorage.setItem("token", token);
-        location.href = isManager ? "/manager" : "/user";
+        // location.href = isManager ? "/manager" : "/user";
+        location.href = "/portal";
       });
   };
 

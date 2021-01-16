@@ -1,3 +1,4 @@
+const apiAuth = require("../middleware/apiAuth");
 document.addEventListener('DOMContentLoaded', (e) => {
     const viewBtn = document.getElementById('view-team-button');
     const createBtn = document.getElementById('create-shift-button');
@@ -5,18 +6,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const deleteBtn = document.getElementById('delete-shift-button');
 
     const displaySchedules = (schedules) => {
-        console.log("displaying schedules: " + schedules);
-        const newTableRow = document.createElement('tr');
-        const newEmpCell = document.createElement('td');
-        const newDayCell = document.createElement('td');
-        const spanTag = document.createElement('span');
-        newEmpCell.setAttribute("class", "emp");
-        newDayCell.setAttribute("class", "day");
-        spanTag.setAttribute("class", "number");
-
-
-
-
+        let parsed = JSON.stringify(schedules)
+        console.log(parsed)
+        console.log(schedules);
     }
 
     const getSchedules = () => {
@@ -25,6 +17,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'x-token': { token }
             },
         })
             .then((response) => response.json())

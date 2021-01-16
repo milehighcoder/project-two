@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const exphbs = require("express-handlebars");
 
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 
@@ -31,11 +31,11 @@ require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
 
 
-app.get('/',(req, res) => {
+app.get('/', (req, res) => {
   res.render('index1');
 });
 
-app.get('/Portal',(req, res) => {
+app.get('/Portal', (req, res) => {
   res.render('index2');
 });
 

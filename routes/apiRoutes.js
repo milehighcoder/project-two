@@ -15,9 +15,9 @@ module.exports = function (app) {
   app.get("/portal/api/schedule/:id", apiAuth, userAuth, (req, res) => {
     console.log(req.body);
     // Write code here to retrieve all of the todos from the database and res.json them back to the user
-      db.Employee.findOne({
-          where: 
-      }).then((result) => res.json(result));
+    db.Employee.findOne({
+      where: req.params.id,
+    }).then((result) => res.json(result));
   });
 
   app.post("/portal/api/schedule", apiAuth, adminAuth, (req, res) => {

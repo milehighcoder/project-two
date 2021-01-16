@@ -35,18 +35,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/Portal", (req, res) => {
-  console.log(req.body);
-  // Write code here to retrieve all of the todos from the database and res.json them back to the user
+
   db.Employee.findAll().then((result) => {
-    console.log(result)
     const hbsObject = {
       employees: result,
     };
-    const employees = result;
-    console.log(employees)
     res.render('index2', hbsObject);
-    // res.json(result)
-    // res.render("index2");
   });
 });
 app.get("/register", (req, res) => {

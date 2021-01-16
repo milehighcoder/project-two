@@ -1,13 +1,31 @@
 <tr>
-    {{#each employees}}
+
     <td class="emp"><span class="number">{{this.first_name}}</span></td>
 
-    <td class="day cell-off-day"><span class="number">{{sunday}}</span></td>
-    <td class="day cell-night-shift"><span class="number">{{monday}}</span></td>
-    <td class="day cell-night-shift"><span class="number">{{tuesday}}</span></td>
-    <td class="day cell-swing-shift"><span class="number">{{wednesday}}</span></td>
-    <td class="day cell-night-shift"><span class="number">{{thursday}}</span></td>
-    <td class="day cell-off-day"><span class="number">{{friday}}</span></td>
-    <td class="day cell-morning-shift"><span class="number">{{saturday}}</span></td>
-    {{/each}}
+    <td {{#if sunday}} class="day cell-morning-shift" {{/if}} {{#unless sunday }} class="day cell-off-day" {{/unless}}>
+        <span class="number">{{this.sunday}}</span>
+    </td>
+    <td {{#if monday}} class="day cell-morning-shift" {{/if}} {{#unless monday }} class="day cell-off-day" {{/unless}}>
+        <span class="number">{{this.monday}}</span>
+    </td>
+    <td {{#if tuesday}} class="day cell-morning-shift" {{/if}} {{#unless tuesday }} class="day cell-off-day"
+        {{/unless}}>
+        <span class="number">{{this.tuesday}}</span>
+    </td>
+    <td {{#if wednesday}} class="day cell-morning-shift" {{/if}} {{#unless wednesday }} class="day cell-off-day"
+        {{/unless}}>
+        <span class="number">{{this.wednesday}}</span>
+    </td>
+    <td {{#if thursday}} class="day cell-morning-shift" {{/if}} {{#unless thursday }} class="day cell-off-day"
+        {{/unless}}>
+        <span class="number">{{this.thursday}}</span>
+    </td>
+    <td {{#if friday}} class="day cell-morning-shift" {{/if}} {{#unless friday }} class="day cell-off-day" {{/unless}}>
+        <span class="number">{{this.friday}}</span>
+    </td>
+    <td {{#if saturday}} class="day cell-morning-shift" {{/if}} {{#unless saturday }} class="day cell-off-day"
+        {{/unless}}>
+        <span class="number">{{this.saturday}}</span>
+    </td>
+
 </tr>

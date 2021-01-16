@@ -182,9 +182,9 @@
                 <th class="day-name">Fri</th>
                 <th class="day-name">Sat</th>
             </tr>
-
-            {{> schedules/schedule-block employees}}
-
+            {{#each employees}}
+            {{> schedules/schedule-block this }}
+            {{/each}}
             {{!-- <tr>
                 <td class="emp"><span class="number">Sarah</span></td>
                 <td class="day cell-night-shift"><span class="number">Night</span></td>
@@ -223,88 +223,8 @@
                 <td class="day"><span class="number"></span></td>
                 <td class="day"><span class="number"></span></td>
                 <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
+                <td class="day"><span class="number"></span></td>--}}
             </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr>
-            <tr>
-                <td class="emp"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-                <td class="day"><span class="number"></span></td>
-            </tr> --}}
         </table>
     </div>
 </div>

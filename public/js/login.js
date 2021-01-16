@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         const {
           token,
           // user: { isManager },
-          
+
         } = data;
         localStorage.setItem("token", token);
         // location.href = isManager ? "/manager" : "/user";

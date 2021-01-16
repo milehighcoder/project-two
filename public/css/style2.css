@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+h1 {
+  color: white;
+}
+
 h3 {
   font-size: 21px;
   margin-bottom: 20px;

@@ -46,13 +46,10 @@
               </div>
             </div>
           </div>
-
         <div class="row">
           <a id="clock-in-button" class="button button-rounded-hover"onclick="startTimer(this)"><h4>IN</h4></a>
-
           <a id="clock-out-button" class="button button-rounded-hover"onclick="resetTimer()"><h4>Out</h4></a>
         </div>
-
       </div>
 
       <br>
@@ -80,14 +77,14 @@
           <p class="gray-subtitle-text">Manager Name</p>
         </div>
         <div class="column row manage-team-button-wrapper">
-          <a id="update-profile-modal" data-open="update-profile-modal"
-            class="button button-rounded-hover manage-team-button-stack">Update Profile</a>
+          <a class="button button-rounded-hover manage-team-button-stack myBtn">Update Profile</a>
         </div>
       </div>
     </div>
-
-    <!-- Update Profile Modal -->
-    <div id="profile-modal" class="modal modal-form-overlay">
+    
+    <!-- Modal 1 - Update Profile -->
+    <div id="Modal1" class="modal">
+      <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <form class="form-wrapper-time-card">
@@ -172,144 +169,213 @@
           </div>
         </form>
       </div>
-
+    </div>
+    
+    <!-- Modal 2 - Create Shift -->
+    <div id="Modal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form-wrapper-time-card">
+          <div>
+            <h3>Create Schedule</h3>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline white-text">First Name:</label>
+                </div>
+                <div class="columns">
+                  <input type="text" id="right-label" placeholder="John">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline white-text">Last Name:</label>
+                </div>
+                <div class="columns">
+                  <input type="text" id="right-label" placeholder="Smith">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline white-text">Days:</label>
+                </div>
+                <div class="columns">
+                  <input type="text" id="right-label" placeholder="Mon, Tue, Thu">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid-x small-x">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label for="right-label" class="right inline white-text">Times:</label>
+                </div>
+                <div class="columns">
+                  <input type="text" id="right-label" placeholder="9:00 AM - 5:00 PM">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column row modal-wrapper">
+            <a class="button button-rounded-hover modal-submit-button">Submit</a>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <!-- Calendar -->
-    <div class="columns large-8">
-      <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-      <table>
-        <tr>
-          <th class="emp-name">Employee</th>
-          <th class="day-name">Sun</th>
-          <th class="day-name">Mon</th>
-          <th class="day-name">Tue</th>
-          <th class="day-name">Wed</th>
-          <th class="day-name">Thu</th>
-          <th class="day-name">Fri</th>
-          <th class="day-name">Sat</th>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number">Sarah</span></td>
-          <td class="day cell-night-shift"><span class="number">Night</span></td>
-          <td class="day cell-night-shift"><span class="number">Night</span></td>
-          <td class="day cell-swing-shift"><span class="number">Swing</span></td>
-          <td class="day cell-night-shift"><span class="number">Night</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-morning-shift"><span class="number">Morning</span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number">Carlos</span></td>
-          <td class="day cell-morning-shift"><span class="number">Morning</span></td>
-          <td class="day cell-morning-shift"><span class="number">Morning</span></td>
-          <td class="day cell-morning-shift"><span class="number">Morning</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-morning-shift"><span class="number">Morning</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-swing-shift"><span class="number">Swing</span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number">Victor</span></td>
-          <td class="day cell-swing-shift"><span class="number">Swing</span></td>
-          <td class="day cell-swing-shift"><span class="number">Swing</span></td>
-          <td class="day cell-swing-shift"><span class="number">Swing</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-off-day"><span class="number">Off</span></td>
-          <td class="day cell-night-shift"><span class="number">Night</span></td>
-          <td class="day cell-night-shift"><span class="number">Night</span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-        <tr>
-          <td class="emp"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-          <td class="day"><span class="number"></span></td>
-        </tr>
-      </table>
+    <!-- Calendar Dashboard -->
+    <div>
+      <div>
+        <span><h1>January 2021</h1></span>
+        <a id="create-shift-button" class="button button-rounded-hover manage-team-button-stack myBtn">Create Schedule</a>
+      </div>
+      <div class="columns large-8">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+        <table>
+          <tr>
+            <th class="emp-name">Employee</th>
+            <th class="day-name">Sun</th>
+            <th class="day-name">Mon</th>
+            <th class="day-name">Tue</th>
+            <th class="day-name">Wed</th>
+            <th class="day-name">Thu</th>
+            <th class="day-name">Fri</th>
+            <th class="day-name">Sat</th>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number">Sarah</span></td>
+            <td class="day cell-night-shift"><span class="number">Night</span></td>
+            <td class="day cell-night-shift"><span class="number">Night</span></td>
+            <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+            <td class="day cell-night-shift"><span class="number">Night</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number">Carlos</span></td>
+            <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+            <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+            <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number">Victor</span></td>
+            <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+            <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+            <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-off-day"><span class="number">Off</span></td>
+            <td class="day cell-night-shift"><span class="number">Night</span></td>
+            <td class="day cell-night-shift"><span class="number">Night</span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+          <tr>
+            <td class="emp"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+            <td class="day"><span class="number"></span></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 

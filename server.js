@@ -30,7 +30,7 @@ require("./routes/authRoutes")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
 
-app.get("/login", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index1");
 });
 

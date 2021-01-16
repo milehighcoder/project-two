@@ -40,7 +40,11 @@ function resetTimer() {
   document
     .getElementsByClassName("button button-rounded-hover")[0]
     .removeAttribute("disabled");
+    console.log(secs)
+    console.log(mins)
+    console.log(hrs)
   clearTimeout(timer);
+  
   display.innerHTML = "00:00:00";
   secs = 0;
   mins = 0;
@@ -48,7 +52,7 @@ function resetTimer() {
   h = "";
   m = "";
   s = "";
-  console.log(timer)
+  
 }
 function countTimer() {
   secs++;

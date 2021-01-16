@@ -27,8 +27,75 @@ h4 {
   text-align: center;
 }
 
-.white-text {
-  color: white;
+/* NAVBAR */
+
+.md-tabs > .mobile-nav-bar {
+  background-color: rgba(54, 54, 54, 0.8);
+  margin-bottom: 15px;
+  padding: 0 !important;
+}
+
+.imgHead {
+  height: 90px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+}
+
+/* TIME CARD */
+
+.form-wrapper-time-card {
+  padding: 10px;
+}
+
+#time-field {
+  border-radius: 10px;
+  margin-top: -20px;
+}
+
+#clock-in-button {
+  background-color: #33a853;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+#clock-out-button {
+  background-color: #ea4335;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+/* MANAGE TEAM CARD */
+
+.manage-team-button-wrapper {
+  padding-left: 60px;
+}
+
+.manage-team-button-stack {
+  background-color: #4385f4;
+  height: 40px;
+  margin-top: -10px;
+  width: 170px;
+  font-size: 14px;
+}
+
+/* MY PROFILE CARD */
+
+#my-profile-card {
+  margin-bottom: 25px;
+}
+
+/* CALENDAR */
+
+.create-shift-button {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
 }
 
 .cell-morning-shift {
@@ -49,25 +116,6 @@ h4 {
 .cell-off-day {
   color: gray;
   background-color: rgb(221, 221, 221);
-}
-
-.create-shift-button {
-  float: right;
-  margin-top: 20px;
-  margin-right: 10px;
-  border-radius: 5px;
-}
-
-
-
-#my-profile-card {
-  margin-bottom: 25px;
-}
-
-.md-tabs > .mobile-nav-bar {
-  background-color: rgba(54, 54, 54, 0.8);
-  margin-bottom: 15px;
-  padding: 0 !important;
 }
 
 table {
@@ -127,56 +175,7 @@ span.number {
   margin-left: 10%;
 }
 
-.imgHead {
-  height: 90px;
-  transform: translateX(-50%);
-  left: 50%;
-  position: relative;
-}
-
-.form-wrapper-time-card {
-  padding: 10px;
-}
-
-#time-field {
-  border-radius: 10px;
-  margin-top: -20px;
-}
-
-.form-inline {
-  flex-direction: column;
-  align-items: stretch;
-}
-
-#clock-in-button {
-  background-color: #33a853;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-top: 10px;
-}
-
-#clock-out-button {
-  background-color: #ea4335;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-top: 10px;
-}
-
-.manage-team-button-wrapper {
-  padding-left: 60px;
-}
-
-.manage-team-button-stack {
-  background-color: #4385f4;
-  height: 40px;
-  margin-top: -10px;
-  width: 170px;
-  font-size: 14px;
-}
-
-/* Gray Sidebar Card Styling */
+/* CARD */
 
 .translucent-form-overlay {
   max-width: 300px;
@@ -214,7 +213,7 @@ span.number {
   color: #8a8a8a;
 }
 
-/* BUTTON START */
+/* BUTTON */
 
 .button-rounded-hover {
   position: relative;
@@ -259,9 +258,7 @@ span.number {
   opacity: 0.5;
 }
 
-/* BUTTON END */
-
-/* MODAL START */
+/* MODAL */
 
 .modal {
   display: none; /* Hidden by default */
@@ -283,6 +280,10 @@ span.number {
   border: none;
   border-radius: 5px;
   width: 80%; /* Could be more or less, depending on screen size */
+  color: white;
+}
+
+.label-text-white {
   color: white;
 }
 
@@ -320,38 +321,12 @@ span.number {
   text-align: center;
 }
 
-/* MODAL END */
-
-.mega-menu .dropdown-pane {
-  width: 100%;
-  max-width: 85rem;
-  margin: 0 auto !important;
-  left: 0% !important;
-  right: 0% !important;
-}
-
-.mega-menu .menu {
-  background: none;
-}
-
-.mega-menu > a::after {
-  display: block;
-  width: 0;
-  height: 0;
-  border: inset 6px;
-  content: "";
-  border-bottom-width: 0;
-  border-top-style: solid;
-  border-color: #1779ba transparent transparent;
-  margin-left: 10px;
-  margin-top: 11%;
-}
-
-/* DROPDOWN MENU START */
+/* DROPDOWN MENU */
 
 .dropdown {
   float: right;
   margin-top: 20px;
+  margin-right: -15px;
 }
 
 .dropdown-content {
@@ -370,7 +345,6 @@ span.number {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: rgb(244, 244, 244);
 }
@@ -378,5 +352,3 @@ span.number {
 .show {
   display: block;
 }
-
-/* DROPDOWN MENU END */

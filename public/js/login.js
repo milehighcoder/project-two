@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   const loginButton = document.getElementById("sign-in-form-login-btn");
+
   const login = () => {
     console.log("logging in");
     const email = document.getElementById("sign-in-form-username").value;
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         location.href = "/portal";
       });
   };
+
   loginButton.addEventListener("click", (event) => {
     event.preventDefault();
     login();

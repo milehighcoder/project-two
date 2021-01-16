@@ -7,7 +7,7 @@ h1 {
   display: inline-block;
 }
 
-h3 {
+h2 {
   font-size: 21px;
   margin-bottom: 20px;
   text-align: center;
@@ -18,6 +18,13 @@ h4 {
   margin-top: 20px;
   font-weight: bold;
   font-size: 21px;
+}
+
+.gray-subtitle-text {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: rgb(179, 179, 179);
+  text-align: center;
 }
 
 .white-text {
@@ -51,12 +58,7 @@ h4 {
   border-radius: 5px;
 }
 
-.gray-subtitle-text {
-  margin-top: -20px;
-  margin-bottom: 20px;
-  color: rgb(179, 179, 179);
-  text-align: center;
-}
+
 
 #my-profile-card {
   margin-bottom: 25px;
@@ -212,7 +214,7 @@ span.number {
   color: #8a8a8a;
 }
 
-/* Button Hover Effects */
+/* BUTTON START */
 
 .button-rounded-hover {
   position: relative;
@@ -220,6 +222,7 @@ span.number {
   transition: all 0.35s ease;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  border-radius: 5px;
 }
 
 .button-rounded-hover:before {
@@ -256,9 +259,10 @@ span.number {
   opacity: 0.5;
 }
 
-/* MODAL */
+/* BUTTON END */
 
-/* Modal Background */
+/* MODAL START */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -272,7 +276,6 @@ span.number {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-/* Content/Box */
 .modal-content {
   background-color: rgba(54, 54, 54, 1);
   margin: 15% auto; /* 15% from the top and centered */
@@ -283,7 +286,6 @@ span.number {
   color: white;
 }
 
-/* Close Button */
 .close {
   color: rgb(253, 253, 253);
   float: right;
@@ -318,6 +320,8 @@ span.number {
   text-align: center;
 }
 
+/* MODAL END */
+
 .mega-menu .dropdown-pane {
   width: 100%;
   max-width: 85rem;
@@ -343,22 +347,22 @@ span.number {
   margin-top: 11%;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* DROPDOWN MENU START */
+
 .dropdown {
-  display: inline-block;
+  float: right;
+  margin-top: 20px;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -368,10 +372,11 @@ span.number {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: rgb(244, 244, 244);
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
 }
+
+/* DROPDOWN MENU END */

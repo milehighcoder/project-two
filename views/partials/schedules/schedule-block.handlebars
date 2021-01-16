@@ -1,0 +1,13 @@
+<tr>
+    {{#each employees}}
+    <td class="emp"><span class="number">{{this.first_name}}</span></td>
+
+    <td class="day cell-off-day"><span class="number">{{sunday}}</span></td>
+    <td class="day cell-night-shift"><span class="number">{{monday}}</span></td>
+    <td class="day cell-night-shift"><span class="number">{{tuesday}}</span></td>
+    <td class="day cell-swing-shift"><span class="number">{{wednesday}}</span></td>
+    <td class="day cell-night-shift"><span class="number">{{thursday}}</span></td>
+    <td class="day cell-off-day"><span class="number">{{friday}}</span></td>
+    <td class="day cell-morning-shift"><span class="number">{{saturday}}</span></td>
+    {{/each}}
+</tr>

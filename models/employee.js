@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     phone: DataTypes.STRING,
-    monday_start: DataTypes.BOOLEAN,
+    monday: DataTypes.BOOLEAN,
     tuesday: DataTypes.BOOLEAN,
     wednesday: DataTypes.BOOLEAN,
     thursday: DataTypes.BOOLEAN,

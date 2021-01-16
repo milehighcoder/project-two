@@ -4,13 +4,13 @@ module.exports = (sequelize, DataTypes) => {
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     phone: DataTypes.STRING,
-    monday: DataTypes.BOOLEAN,
-    tuesday: DataTypes.BOOLEAN,
-    wednesday: DataTypes.BOOLEAN,
-    thursday: DataTypes.BOOLEAN,
-    friday: DataTypes.BOOLEAN,
-    saturday: DataTypes.BOOLEAN,
-    sunday: DataTypes.BOOLEAN,
+    monday: DataTypes.STRING,
+    tuesday: DataTypes.STRING,
+    wednesday: DataTypes.STRING,
+    thursday: DataTypes.STRING,
+    friday: DataTypes.STRING,
+    saturday: DataTypes.STRING,
+    sunday: DataTypes.STRING,
   });
   return Employee;
 };

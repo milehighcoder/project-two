@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const updateBtn = document.getElementById('update-shift-button');
     const deleteBtn = document.getElementById('delete-shift-button');
 
-    // const displaySchedules = (schedules) => {
-    //     let parsed = JSON.stringify(schedules)
-    //     console.log(parsed)
-    //     console.log(schedules);
-    // }
-
     const getSchedules = () => {
         console.log("getting schedules")
         fetch('/portal/api/schedule', {
@@ -18,16 +12,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
             headers: {
                 'Content-Type': 'application/json',
                 // 'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZW1haWwiOiJwYW0uMUBlbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIxLTAxLTE2VDA3OjAyOjE3LjY3NFoifSwiaWF0IjoxNjEwNzgwNTM3fQ.hGXyliNzixfBdxh4opyLGSbNHrtc6csjQxw-vbiShd0'
-
             },
         })
             .then((response) => response.json())
             .then((data) => {
-                // console.log('Employee Schedules: ', data);
                 const schedules = data;
                 console.log('Employee Schedules: ', schedules)
-                // add function to display schedules
-                // displaySchedules(schedules);
             });
     };
     const createSchedule = () => {
@@ -40,7 +30,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                // console.log('Employee Schedules: ', data);
                 const schedules = data;
                 console.log('Employee Schedules: ', schedules)
                 // add function to display schedules
@@ -56,7 +45,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             }
         }
         console.log("Updating schedules")
-        fetch('/portal/api/schedule', {
+        fetch(`/portal/api/schedule/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -64,7 +53,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                // console.log('Employee Schedules: ', data);
                 const schedules = data;
                 console.log('Employee Schedules: ', schedules)
                 // add function to display schedules

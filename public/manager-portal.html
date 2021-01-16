@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Foundation Link -->
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-  <!-- Custom CSS Link -->
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  <!-- Custom CSS Link -->
   <link rel="stylesheet" href="css/style2.css">
   <title>Manager Dashboard | When We Clean</title>
 </head>
@@ -237,11 +238,20 @@
 
     <!-- Calendar Dashboard -->
     <div>
-      <div>
-        <span><h1>January 2021</h1></span>
-        <a id="create-shift-button" class="button button-rounded-hover myBtn create-shift-button">Create Schedule</a>
-      </div>
       <div class="columns large-8">
+        <div>
+          <span><h1>January 2021</h1></span>
+          <a id="create-shift-button" class="button button-rounded-hover myBtn create-shift-button">Create Schedule</a>
+        </div>
+        
+        <div class="dropdown">
+          <a onclick="myFunction()" class="button button-rounded-hover dropbtn"><i class="fas fa-caret-down"></i></i></a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Edit Schedule</a>
+            <a href="#">Delete Schedule</a>
+          </div>
+        </div>
+
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
         <table>
           <tr>

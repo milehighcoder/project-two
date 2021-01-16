@@ -7,7 +7,7 @@ var m = "";
 var s = "";
 var timer;
 
-// START MODAL SCRIPT |||||||||||||||||||||||||||
+// START MODAL SCRIPT
 
 // Get the modal
 var modal = document.getElementsByClassName("modal");
@@ -43,7 +43,26 @@ window.onclick = function (event) {
   }
 };
 
-// END MODAL SCRIPT |||||||||||||||||||||||||||||||
+// END MODAL SCRIPT
+
+// START DROPDOWN MENU SCRIPT
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+// END DROPDOWN MENU SCRIPT
 
 function startTimer(btn) {
   btn.setAttribute("disabled", "disabled");

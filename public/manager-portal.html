@@ -185,62 +185,25 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <form class="form-wrapper-time-card">
-          <div>
-            <h3>Create Schedule</h3>
+        <h3>Create Schedule</h3>
+        <div class="dropdown">
+          <button class="dropbtn">Choose Employe</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
           </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">First Name:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="John">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Last Name:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="Smith">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Days:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="Mon, Tue, Thu">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Times:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="9:00 AM - 5:00 PM">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column row modal-wrapper">
-            <a class="button button-rounded-hover modal-submit-button">Submit</a>
-          </div>
+        </div>
+        <form class="form-inline" action="/action_page.php">
+          <label class="label-text" for="">Employee:</label>
+          <input type="email" id="email" placeholder="Enter email" name="email">
+          
+          <label class="label-text">
+            <input  type="text" name="remember"> Remember me
+          </label>
+          <button type="submit">Submit</button>
         </form>
+
       </div>
     </div>
 

@@ -67,10 +67,10 @@
         <div id="my-profile-card" class="translucent-form-overlay">
             <div>
                 <h2>My Profile</h2>
-                <p class="gray-subtitle-text">Manager Name</p>
+                <p id="manager-name-container" class="gray-subtitle-text">Manager Name</p>
             </div>
             <div class="column row manage-team-button-wrapper">
-                <a class="button button-rounded-hover manage-team-button-stack myBtn">Update Profile</a>
+                <a class="button button-rounded-hover manage-team-button-stack myBtn" id="show-update-profile-button">Update Profile</a>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
                                 <label for="right-label" class="right inline label-text-white">First Name:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="right-label" placeholder="John">
+                                <input type="text" id="update-first-name" placeholder="John">
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 <label for="right-label" class="right inline label-text-white">Last Name:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="right-label" placeholder="Smith">
+                                <input type="text" id="update-last-name" placeholder="Smith">
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                                 <label for="right-label" class="right inline label-text-white">Phone Number:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="right-label" placeholder="123-456-7890">
+                                <input type="text" id="update-phone" placeholder="123-456-7890">
                             </div>
                         </div>
                     </div>
@@ -128,12 +128,12 @@
                                 <label for="right-label" class="right inline label-text-white">Email:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="right-label" placeholder="example@example.com">
+                                <input type="text" id="update-email" placeholder="example@example.com">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="grid-x small-x">
                         <div class="row">
                             <div class="small-2 columns">
@@ -157,9 +157,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="column row modal-wrapper">
-                    <a class="button button-rounded-hover modal-submit-button">Submit</a>
+                    <a id="update-profile-button" class="button button-rounded-hover modal-submit-button">Submit</a>
                 </div>
             </form>
         </div>

@@ -1,34 +1,22 @@
 <tr>
 
     <td class="emp"><span class="number">{{this.first_name}}</span></td>
-
-
-
-    <td contenteditable="true" {{#if sunday}} class="day cell-morning-shift" <span class="number">{{this.sunday}}</span>{{/if}} {{#unless
-        sunday }} class="day cell-off-day" <span class="number"> off </span>{{/unless}}
-
-    </td>
-    <td {{#if monday}} class="day cell-morning-shift" {{/if}} {{#unless monday }} class="day cell-off-day" {{/unless}}>
-        <span class="number">{{this.monday}}</span>
-    </td>
-    <td {{#if tuesday}} class="day cell-morning-shift" {{/if}} {{#unless tuesday }} class="day cell-off-day"
-        {{/unless}}>
-        <span class="number">{{this.tuesday}}</span>
-    </td>
-    <td {{#if wednesday}} class="day cell-morning-shift" {{/if}} {{#unless wednesday }} class="day cell-off-day"
-        {{/unless}}>
-        <span class="number">{{this.wednesday}}</span>
-    </td>
-    <td {{#if thursday}} class="day cell-morning-shift" {{/if}} {{#unless thursday }} class="day cell-off-day"
-        {{/unless}}>
-        <span class="number">{{this.thursday}}</span>
-    </td>
-    <td {{#if friday}} class="day cell-morning-shift" {{/if}} {{#unless friday }} class="day cell-off-day" {{/unless}}>
-        <span class="number">{{this.friday}}</span>
-    </td>
-    <td {{#if saturday}} class="day cell-morning-shift" {{/if}} {{#unless saturday }} class="day cell-off-day"
-        {{/unless}}>
-        <span class="number">{{this.saturday}}</span>
-    </td>
-
+    <td {{#if sunday}} class="day cell-morning-shift" id="sun-{{id}}" <span class="number">{{this.sunday}}</span>{{/if}}
+        {{#unless sunday }} id="sun-{{id}}" class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="mon-{{id}}" {{#if monday}} class="day cell-morning-shift" <span class="number">{{this.monday}}</span>{{/if}}
+        {{#unless monday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="tues-{{id}}" {{#if tuesday}} class="day cell-morning-shift" <span class="number">
+        {{this.tuesday}}</span>{{/if}}
+        {{#unless tuesday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="wed-{{id}}" {{#if wednesday}} class="day cell-morning-shift" <span class="number">
+        {{this.wednesday}}</span>{{/if}}
+        {{#unless wednesday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="thur-{{id}}" {{#if thursday}} class="day cell-morning-shift" <span class="number">
+        {{this.thursday}}</span>{{/if}}
+        {{#unless thursday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="fri-{{id}}" {{#if friday}} class="day cell-morning-shift" <span class="number">{{this.friday}}</span>{{/if}}
+        {{#unless friday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td id="sat-{{id}}" {{#if saturday}} class="day cell-morning-shift" <span class="number">
+        {{this.saturday}}</span>{{/if}}
+        {{#unless saturday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
 </tr>

@@ -1,7 +1,6 @@
 <tr>
 
     <td class="emp"><span class="number">{{this.first_name}}</span></td>
-
     <td {{#if sunday}} class="day cell-morning-shift" id="sun-{{id}}" <span class="number">{{this.sunday}}</span>{{/if}}
         {{#unless sunday }} id="sun-{{id}}" class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
     <td id="mon-{{id}}" {{#if monday}} class="day cell-morning-shift" <span class="number">{{this.monday}}</span>{{/if}}
@@ -20,5 +19,4 @@
     <td id="sat-{{id}}" {{#if saturday}} class="day cell-morning-shift" <span class="number">
         {{this.saturday}}</span>{{/if}}
         {{#unless saturday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
-
 </tr>

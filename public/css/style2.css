@@ -13,6 +13,15 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
 h4 {
   font-size: 16px;
   margin-top: 20px;
@@ -277,32 +286,45 @@ span.number {
   opacity: 0.5;
 }
 
+.add-button {
+  margin-left: 25px;
+  float: right;
+}
+
+.cancel-button {
+  margin-left: 25px;
+  float: right;
+  color: white;
+  padding-top: 7px;
+}
+
 /* MODAL */
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   background-color: rgba(54, 54, 54, 1);
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
+  padding-bottom: 70px;
   border: none;
   border-radius: 5px;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
   color: white;
 }
 
-.label-text-white {
+.label-text {
   color: white;
 }
 
@@ -311,11 +333,12 @@ span.number {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-top: -20px;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #ea4335;
   text-decoration: none;
   cursor: pointer;
 }
@@ -323,7 +346,6 @@ span.number {
 .modal-form-overlay {
   width: 100%;
   background-color: rgba(54, 54, 54, 0.8);
-
   color: #fefefe;
   border-radius: 5px;
 }
@@ -340,9 +362,105 @@ span.number {
   text-align: center;
 }
 
-/* DROPDOWN MENU */
+.wrapper {
+  width: 150px;
+  padding-top: 40px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.wrapper-small {
+  width: 60px;
+
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.wrapper-switch {
+  width: 60px;
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.wrapper-days {
+  margin-bottom: -60px;
+}
+
+.container-days {
+  margin-bottom: 50px;
+}
+
+.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid silver;
+  color: silver;
+  outline: none;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 16px;
+  color: #01a1f1;
+}
+
+.wrapper .input-data .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+  background: silver;
+}
+
+.wrapper .input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #01a1f1;
+
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+
+.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: silver;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* DROPDOWN MENUS */
+
+.dropbtn {
+  background-color: #01a1f1;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+}
 
 .dropdown {
+  position: relative;
   float: right;
   margin-top: 20px;
   margin-right: -15px;
@@ -351,10 +469,10 @@ span.number {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  background-color: #ffffff;
 }
 
 .dropdown-content a {
@@ -365,9 +483,81 @@ span.number {
 }
 
 .dropdown-content a:hover {
-  background-color: rgb(244, 244, 244);
+  background-color: #eeeeee;
+  color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .show {
   display: block;
+}
+
+/* TOGGLE SWITCH */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 80px;
+  padding-top: 16px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 21px;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #01a1f1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #01a1f1;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

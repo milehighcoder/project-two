@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     const viewBtn = document.getElementById('view-team-button');
     const createBtn = document.getElementById('create-shift-button');
-    const updateBtn = document.getElementById('update-shift-button');
+    const updateBtn = document.getElementById('edit-button');
     const deleteBtn = document.getElementById('delete-shift-button');
 
     const getSchedules = () => {

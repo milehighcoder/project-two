@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', (e) => {
     // const viewBtn = document.getElementById('view-team-button');
     const createBtn = document.getElementById('create-shift-button');
-    const updateBtn = document.getElementById('edit-button');
+    const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
     const deleteBtn = document.getElementById('delete-shift-button');
+    const tdEls = document.querySelectorAll('td');
+    const tdArray = Array.from(tdEls);
 
     const getSchedules = () => {
         console.log("getting schedules")
@@ -36,15 +38,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 // add function to display schedules
             });
     };
-    const updateSchedule = () => {
-        const itemEdit = e.target.children;
-        for (let i = 0; i < itemEdit.length; i++) {
-            const currentEl = itemEdit[i];
-            if (currentEl.tagName === 'INPUT') {
-                currentEl.value = currentEl.parentElement.children[0].innerText;
-
-            }
-        }
+    const updateSchedule = (e) => {
+        console.log('updating schedule...')
+        // const itemEdit = e.target.children;
+        // for (let i = 0; i < itemEdit.length; i++) {
+        //     const currentEl = itemEdit[i];
+        //     if (currentEl.tagName === 'INPUT') {
+        //         currentEl.value = currentEl.parentElement.children[0].innerText;
+        //     }
+        // }
         console.log("Updating schedules")
         fetch(`/portal/api/schedule/${id}`, {
             method: 'PUT',
@@ -82,13 +84,31 @@ document.addEventListener('DOMContentLoaded', (e) => {
         console.log("clicked create");
         createSchedule();
     });
-    updateBtn.addEventListener("click", () => {
-        console.log("clicked update");
-        updateSchedule();
+    editBtn.addEventListener("click", () => {
+        console.log("clicked edit");
+        // console.log(tdArray)
+        tdArray.forEach((elem) => {
+            elem.setAttribute("contenteditable", true)
+            if (elem.className === "day cell-morning-shift") {
+                elem.className = "day calendar-edit-blue"
+            } else {
+                elem.className = "calendar-edit-gray"
+            }
+
+        })
+        createBtn.style.display = 'none';
+        saveBtn.style.display = 'block';
+
+
     });
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
         deleteSchedule();
+    });
+    saveBtn.addEventListener("click", () => {
+        console.log("clicked save");
+        location.href = "/portal";
+        updateSchedule();
     });
 
 

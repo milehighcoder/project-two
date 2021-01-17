@@ -92,10 +92,29 @@ h4 {
 /* CALENDAR */
 
 .create-shift-button {
+  /* display: block; */
   float: right;
   margin-top: 20px;
   margin-right: 10px;
   border-radius: 5px;
+}
+
+.save-button {
+  display: none;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.calendar-edit-blue {
+  background-color: #01a1f180;
+  color: rgb(161, 148, 148);
+}
+
+.calendar-edit-gray {
+  background-color: rgb(221, 221, 221, .9);
+  color: black;
 }
 
 .cell-morning-shift {

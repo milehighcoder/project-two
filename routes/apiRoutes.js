@@ -5,25 +5,27 @@ const userAuth = require("../middleware/userAuth");
 
 module.exports = function (app) {
   // GET route for getting all of the employees
-  app.get("/portal/api/schedule",
+  app.get(
+    "/portal/api/schedule",
     // apiAuth,
-    // adminAuth, 
+    // adminAuth,
     (req, res) => {
       db.Employee.findAll().then((result) => {
-        res.json(result)
+        res.json(result);
       });
 
       // GET route for getting all of the employees
       // app.get("/portal/api/schedule/:id",
-      //   // apiAuth, userAuth, 
+      //   // apiAuth, userAuth,
       //   (req, res) => {
       //     db.Employee.findOne({
       //       where: req.params.id,
       //     }).then((result) => res.json);
       //   });
 
-      app.post("/portal/api/schedule",
-        // apiAuth, adminAuth, 
+      app.post(
+        "/portal/api/schedule",
+        // apiAuth, adminAuth,
         (req, res) => {
           db.Employee.create({
             first_name: req.body.first_name,
@@ -38,22 +40,26 @@ module.exports = function (app) {
             saturday: req.body.saturday,
             sunday: req.body.sunday,
           }).then((dbEmployee) => res.json(dbEmployee));
-        });
+        }
+      );
 
       // DELETE route for deleting employee schedule
-      app.delete("/portal/api/schedule/:id",
-        // apiAuth, adminAuth, 
+      app.delete(
+        "/portal/api/schedule/:id",
+        // apiAuth, adminAuth,
         (req, res) => {
           db.Employee.destroy({
             where: {
               id: req.params.id,
             },
           }).then((result) => res.json(result));
-        });
+        }
+      );
 
       // PUT route for updating schedules
-      app.put("/portal/api/schedule/:id",
-        // apiAuth, adminAuth, 
+      app.put(
+        "/portal/api/schedule/:id",
+        // apiAuth, adminAuth,
         (req, res) => {
           db.Employee.update(
             {
@@ -75,6 +81,8 @@ module.exports = function (app) {
               },
             }
           ).then((result) => res.json(result));
-        });
-    });
+        }
+      );
+    }
+  );
 };

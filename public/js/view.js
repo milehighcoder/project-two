@@ -1,8 +1,9 @@
 // const apiAuth = require("../middleware/apiAuth");
 document.addEventListener('DOMContentLoaded', (e) => {
-    const viewBtn = document.getElementById('view-team-button');
+    // const viewBtn = document.getElementById('view-team-button');
     const createBtn = document.getElementById('create-shift-button');
     const updateBtn = document.getElementById('edit-button');
+    const saveBtn = document.getElementById('save-button');
     const deleteBtn = document.getElementById('delete-shift-button');
 
     const getSchedules = () => {
@@ -73,10 +74,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then(getSchedules);
     };
 
-    viewBtn.addEventListener("click", () => {
-        console.log("clicked view");
-        getSchedules();
-    });
+    // viewBtn.addEventListener("click", () => {
+    //     console.log("clicked view");
+    //     getSchedules();
+    // });
     createBtn.addEventListener("click", () => {
         console.log("clicked create");
         createSchedule();

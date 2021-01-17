@@ -19,23 +19,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     }
 
-    const getSchedules = () => {
-        console.log("getting schedules")
-        fetch('/portal/api/schedule', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                // console.log('Employee Schedules: ', data);
-                const schedules = data;
-                console.log('Employee Schedules: ', schedules)
-                // add function to display schedules
-                displaySchedules(schedules);
-            });
-    };
+    // const getSchedules = () => {
+    //     console.log("getting schedules")
+    //     fetch('/portal/api/schedule', {
+    //         method: 'GET',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             // console.log('Employee Schedules: ', data);
+    //             const schedules = data;
+    //             console.log('Employee Schedules: ', schedules)
+    //             // add function to display schedules
+    //             displaySchedules(schedules);
+    //         });
+    // };
     const createSchedule = () => {
         console.log("Creating schedule")
         fetch('/portal/api/schedule', {
@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then(getSchedules);
     };
 
-    viewBtn.addEventListener("click", () => {
-        console.log("clicked view");
-        getSchedules();
-    });
+    // viewBtn.addEventListener("click", () => {
+    //     console.log("clicked view");
+    //     getSchedules();
+    // });
     createBtn.addEventListener("click", () => {
         console.log("clicked create");
         createSchedule();

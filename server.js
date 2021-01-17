@@ -29,15 +29,15 @@ require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
 
 app.get("/login", (req, res) => {
-  res.render("index1");
+  res.render("login");
 });
 
-app.get("/Portal", (req, res) => {
-  res.render("index2");
+app.get("/portal", (req, res) => {
+  res.render("portal");
 });
 
 app.get("/register", (req, res) => {
-  res.render("index3");
+  res.render("register");
 });
 
 // Syncing our sequelize models and then starting our Express app

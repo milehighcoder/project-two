@@ -3,7 +3,7 @@ body {
 }
 .translucent-form-overlay {
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   width: 30em;
   margin-top: -9em; /*set to a negative number 1/2 of your height*/

@@ -76,7 +76,7 @@ module.exports = function (app) {
       };
 
       const newUser = await db.User.create(payload);
-      return res.json({
+      return res.status(201).json({
         message: "User Creation Successful!",
       });
     } catch (err) {

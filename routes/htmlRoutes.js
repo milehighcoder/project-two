@@ -11,6 +11,6 @@ module.exports = (app) => {
 
   // Catch All that redirects the user to an appropriate view based on the request body
   app.get("/", (req, res) => {
-    const { token } = req.body;
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 };

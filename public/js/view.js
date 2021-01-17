@@ -40,6 +40,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
     };
     const updateSchedule = (e) => {
         console.log('updating schedule...')
+        const sundayCell = document.getElementById(`sun-1`).innerHTML;
+        const mondayCell = document.getElementById(`mon-1`).innerHTML;
+        const tuesdayCell = document.getElementById(`tues-1`).innerHTML;
+        const wednesdayCell = document.getElementById(`wed-1`).innerHTML;
+        const thursdayCell = document.getElementById(`thur-1`).innerHTML;
+        const fridayCell = document.getElementById(`fri-1`).innerHTML;
+        const saturdayCell = document.getElementById(`sat-1`).innerHTML;
+
+        const scheduleChange = {
+            sunday: sundayCell.trim(),
+            monday: mondayCell.trim(),
+            tuesday: tuesdayCell.trim(),
+            wednesday: wednesdayCell.trim(),
+            thursday: thursdayCell.trim(),
+            friday: fridayCell.trim(),
+            saturday: saturdayCell.trim(),
+        }
         // const itemEdit = e.target.children;
         // for (let i = 0; i < itemEdit.length; i++) {
         //     const currentEl = itemEdit[i];
@@ -48,17 +65,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
         //     }
         // }
         console.log("Updating schedules")
-        fetch(`/portal/api/schedule/${id}`, {
+        fetch(`/portal/api/schedule/1`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
+            body: JSON.stringify(scheduleChange)
         })
             .then((response) => response.json())
             .then((data) => {
                 const schedules = data;
                 console.log('Employee Schedules: ', schedules)
                 // add function to display schedules
+                location.href = "/portal";
             });
     };
     const deleteSchedule = (e) => {
@@ -94,22 +113,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
             } else {
                 elem.className = "calendar-edit-gray"
             }
-
         })
         createBtn.style.display = 'none';
         saveBtn.style.display = 'block';
-
-
     });
+
+    saveBtn.addEventListener("click", () => {
+        console.log("clicked save");
+
+        updateSchedule();
+    });
+
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
         deleteSchedule();
     });
-    saveBtn.addEventListener("click", () => {
-        console.log("clicked save");
-        location.href = "/portal";
-        updateSchedule();
-    });
+
+
 
 
 

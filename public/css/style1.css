@@ -57,6 +57,7 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .button-hover-reveal-wrapper:hover {
@@ -134,7 +135,7 @@ body {
   color: #adadad;
   letter-spacing: 1px;
   font-weight: 600;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .sign-in-form input {
@@ -145,7 +146,7 @@ body {
   opacity: 0.8;
 }
 
-.sign-in-form-username,
+.sign-in-form-username
 .sign-in-form-password {
   border-radius: 5%;
   border: none;

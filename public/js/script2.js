@@ -1,3 +1,51 @@
+// MODAL START
+var modal = document.getElementsByClassName("modal");
+var btn = document.getElementsByClassName("myBtn");
+var span = document.getElementsByClassName("close");
+
+btn[0].onclick = function () {
+  modal[0].style.display = "block";
+};
+
+btn[1].onclick = function () {
+  modal[1].style.display = "block";
+};
+
+span[0].onclick = function () {
+  modal[0].style.display = "none";
+};
+
+span[1].onclick = function () {
+  modal[1].style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+// MODAL END
+
+// DROPDOWN MENU START
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
+// DROPDOWN MENU END
+
+// TIME CARD START
 var display = document.getElementById("timer");
 var secs = 0;
 var mins = 0;
@@ -6,26 +54,7 @@ var h = "";
 var m = "";
 var s = "";
 var timer;
-// Get the modal
-var modal = document.getElementById("profile-modal");
-// Get the button that opens the modal
-var btn = document.getElementById("update-profile-modal");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+
 function startTimer(btn) {
   btn.setAttribute("disabled", "disabled");
   durationTime();
@@ -40,7 +69,11 @@ function resetTimer() {
   document
     .getElementsByClassName("button button-rounded-hover")[0]
     .removeAttribute("disabled");
+    console.log(secs)
+    console.log(mins)
+    console.log(hrs)
   clearTimeout(timer);
+  
   display.innerHTML = "00:00:00";
   secs = 0;
   mins = 0;
@@ -48,7 +81,9 @@ function resetTimer() {
   h = "";
   m = "";
   s = "";
-  console.log(timer)
+
+  console.log(timer);
+
 }
 function countTimer() {
   secs++;
@@ -71,3 +106,4 @@ function durationTime() {
     timer = setTimeout(countTimer, 100);
   }
 }
+// TIME CARD END

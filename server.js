@@ -1,8 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const Handlebars = require("handlebars");
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -19,7 +23,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Routes
 const exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+  })
+);
 app.set("view engine", "handlebars");
 
 require("./routes/authRoutes")(app);
@@ -28,12 +38,17 @@ require("./routes/authRoutes")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
 
-app.get("/login", (req, res) => {
+app.get("/", (req, res) => {
   res.render("login");
 });
 
 app.get("/portal", (req, res) => {
-  res.render("portal");
+  db.Employee.findAll().then((result) => {
+    const hbsObject = {
+      employees: result,
+    };
+    res.render("portal", hbsObject);
+  });
 });
 
 app.get("/register", (req, res) => {

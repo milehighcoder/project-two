@@ -40,38 +40,50 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const email = emailField.value;
     const isManager = isManagerField.checked;
 
-    fetch("/auth/register", {
-      method: "POST",
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        phone,
-        email,
-        password,
-        isManager,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.status === 201) {
-          return response.json();
-        } else {
-          return response.json().then((res) => {
-            throw new Error(res.message);
-          });
-        }
+    const emptyFields = [];
+    if (
+      first_name &&
+      last_name &&
+      phone &&
+      email &&
+      password &&
+      confirmPassword
+    ) {
+      fetch("/auth/register", {
+        method: "POST",
+        body: JSON.stringify({
+          first_name,
+          last_name,
+          phone,
+          email,
+          password,
+          isManager,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .then((response) => {
-        alert(response.message);
-        location.href = "/login";
-      })
-      .catch((error) => {
-        alert(error.message);
-        clearForm();
-        return;
-      });
+        .then((response) => {
+          if (response.status === 201) {
+            return response.json();
+          } else {
+            return response.json().then((res) => {
+              throw new Error(res.message);
+            });
+          }
+        })
+        .then((response) => {
+          alert(response.message);
+          location.href = "/";
+        })
+        .catch((error) => {
+          alert(error.message);
+          clearForm();
+          return;
+        });
+    } else {
+      alert("Please fill all the fields in the form to register");
+    }
   };
 
   registerButton.addEventListener("click", (event) => {

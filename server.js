@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const Handlebars = require("handlebars");
@@ -6,6 +7,7 @@ const {
 } = require("@handlebars/allow-prototype-access");
 // Sets up the Express App
 const app = express();
+const apiAuth = require("./middleware/apiAuth");
 const PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
@@ -42,6 +44,24 @@ app.get("/", (req, res) => {
   res.render("login");
 });
 
+app.get("/register", (req, res) => {
+  res.render("register");
+  // res.sendFile(path.join(__dirname, "./public/register.html"));
+});
+
+app.get("/me", apiAuth, (req, res) => {
+  const { user } = req;
+  return res.json(user);
+});
+
+const {
+  updateDetails,
+  changePassword,
+} = require("./controllers/user.controller");
+
+app.post("/updateDetails", apiAuth, updateDetails);
+app.post("/changePassword", apiAuth, changePassword);
+
 app.get("/portal", (req, res) => {
   db.Employee.findAll().then((result) => {
     const hbsObject = {
@@ -49,10 +69,6 @@ app.get("/portal", (req, res) => {
     };
     res.render("portal", hbsObject);
   });
-});
-
-app.get("/register", (req, res) => {
-  res.render("register");
 });
 
 // Syncing our sequelize models and then starting our Express app

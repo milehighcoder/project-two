@@ -30,8 +30,8 @@ module.exports = function (app) {
       db.Employee.create({
         first_name: req.body.first_name,
         last_name: req.body.last_name,
-        email: req.body.email,
-        phone: req.body.phone,
+        // email: req.body.email,
+        // phone: req.body.phone,
         monday: req.body.monday,
         tuesday: req.body.tuesday,
         wednesday: req.body.wednesday,

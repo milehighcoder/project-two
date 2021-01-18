@@ -22,9 +22,9 @@ const getUserDetails = () => {
       console.log("data: ", data);
       const { first_name, last_name, email, phone, userId: id } = data;
       firstNameField.value = first_name;
-      lastNameField.value = last_name;
-      phoneNumberField.value = phone;
-      emailField.value = email;
+      // lastNameField.value = last_name;
+      // phoneNumberField.value = phone;
+      // emailField.value = email;
       userId = id;
       document.getElementById("manager-name-container").innerText =
         first_name + " " + last_name;

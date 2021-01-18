@@ -167,7 +167,7 @@
     <!-- Modal 2 (Create Schedule) -->
     <div id="Modal2" class="modal">
         <!-- Modal Content -->
-        <div class="modal-content">
+        <div id="Modal2-content" class="modal-content">
             <span class="close">&times;</span>
             <div class="container-days">
                 <h3>Hours</h3>
@@ -188,7 +188,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="sun-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -200,7 +200,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="sun-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="mon-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="mon-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -258,7 +258,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="tues-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -270,7 +270,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="tues-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -293,7 +293,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="wed-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -305,7 +305,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="wed-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -328,7 +328,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="thur-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -340,7 +340,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="thur-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -363,7 +363,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="fri-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -375,7 +375,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="fri-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -398,7 +398,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="sat-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -410,7 +410,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input type="text" required>
+                            <input id="sat-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -418,7 +418,7 @@
                 </div>
             </div>
             <div>
-                <a class="button button-rounded-hover add-button">Add</a>
+                <a id="add-button" class="button button-rounded-hover add-button">Add</a>
                 <a class="add-button cancel-button">Cancel</a>
             </div>
 

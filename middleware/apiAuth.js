@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const apiAuth = async (req, res, next) => {
   if (!(req.headers && req.headers["x-token"])) {
-    return res.status(401).send({ message: "Token is not provided" });
+    return res.redirect(401, "/");
   }
   const token = req.headers["x-token"];
   try {
@@ -17,16 +17,14 @@ const apiAuth = async (req, res, next) => {
       where: { email: req.user.email },
     });
     if (!user) {
-      return res.status(401).send({ message: "User is not found in system" });
+      return res.redirect(401, "/");
     }
     const reqUser = { ...user.get() };
     reqUser.userId = user.id;
     req.user = reqUser;
     return next();
   } catch (error) {
-    return res.status(401).send({
-      message: `Incorrect token is provided, try re-login. ${error.message}`,
-    });
+    return res.redirect(401, "/");
   }
 };
 

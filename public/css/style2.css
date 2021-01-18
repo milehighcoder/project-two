@@ -298,6 +298,10 @@ span.number {
   padding-top: 7px;
 }
 
+.add-cancel-buttons {
+  margin-bottom: 110px;
+}
+
 /* MODAL */
 
 .modal {

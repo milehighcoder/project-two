@@ -11,12 +11,20 @@ btn[1].onclick = function () {
   modal[1].style.display = "block";
 };
 
+btn[2].onclick = function () {
+  modal[2].style.display = "block";
+};
+
 span[0].onclick = function () {
   modal[0].style.display = "none";
 };
 
 span[1].onclick = function () {
   modal[1].style.display = "none";
+};
+
+span[2].onclick = function () {
+  modal[2].style.display = "none";
 };
 
 window.onclick = function (event) {
@@ -69,11 +77,11 @@ function resetTimer() {
   document
     .getElementsByClassName("button button-rounded-hover")[0]
     .removeAttribute("disabled");
-    console.log(secs)
-    console.log(mins)
-    console.log(hrs)
+  console.log(secs);
+  console.log(mins);
+  console.log(hrs);
   clearTimeout(timer);
-  
+
   display.innerHTML = "00:00:00";
   secs = 0;
   mins = 0;
@@ -83,7 +91,6 @@ function resetTimer() {
   s = "";
 
   console.log(timer);
-
 }
 function countTimer() {
   secs++;

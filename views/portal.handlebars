@@ -52,8 +52,7 @@
             </div>
             <!-- Button Stack -->
             <div class="column row manage-team-button-wrapper">
-                <a id="view-team-button" class="button button-rounded-hover manage-team-button-stack">View
-                    Shifts</a>
+                <a id="view-team-button" class="button button-rounded-hover manage-team-button-stack">View Shifts</a>
                 <a id="create-shift-button" class="button button-rounded-hover manage-team-button-stack">Create
                     Shift</a>
                 <a id="update-shift-button" class="button button-rounded-hover manage-team-button-stack">Update
@@ -70,7 +69,8 @@
                 <p id="manager-name-container" class="gray-subtitle-text">Manager Name</p>
             </div>
             <div class="column row manage-team-button-wrapper">
-                <a class="button button-rounded-hover manage-team-button-stack myBtn" id="show-update-profile-button">Update Profile</a>
+                <a class="button button-rounded-hover manage-team-button-stack myBtn"
+                    id="show-update-profile-button">Update Profile</a>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@
                                 <label for="right-label" class="right inline label-text-white">Last Name:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="update-last-name" placeholder="Smith">
+                                <input type="text" id="right-label" placeholder="Smith">
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                                 <label for="right-label" class="right inline label-text-white">Phone Number:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="update-phone" placeholder="123-456-7890">
+                                <input type="text" id="right-label" placeholder="123-456-7890">
                             </div>
                         </div>
                     </div>
@@ -128,17 +128,16 @@
                                 <label for="right-label" class="right inline label-text-white">Email:</label>
                             </div>
                             <div class="columns">
-                                <input type="text" id="update-email" placeholder="example@example.com">
+                                <input type="text" id="right-label" placeholder="example@example.com">
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
+                <div class="row">
                     <div class="grid-x small-x">
                         <div class="row">
                             <div class="small-2 columns">
-                                <label for="right-label" class="right inline label-text-white">Current
-                                    Password:</label>
+                                <label for="right-label" class="right inline label-text-white">Current Password:</label>
                             </div>
                             <div class="columns">
                                 <input type="text" id="right-label" placeholder="xxxxxxxxxx">
@@ -157,9 +156,9 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="column row modal-wrapper">
-                    <a id="update-profile-button" class="button button-rounded-hover modal-submit-button">Submit</a>
+                    <a class="button button-rounded-hover modal-submit-button">Submit</a>
                 </div>
             </form>
         </div>
@@ -167,65 +166,262 @@
 
     <!-- Modal 2 (Create Schedule) -->
     <div id="Modal2" class="modal">
-        <!-- Modal content -->
+        <!-- Modal Content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form class="form-wrapper-time-card">
-                <div>
-                    <h3>Create Schedule</h3>
-                </div>
-                <div class="row">
-                    <div class="grid-x small-x">
-                        <div class="row">
-                            <div class="small-2 columns">
-                                <label for="right-label" class="right inline label-text-white">First Name:</label>
-                            </div>
-                            <div class="columns">
-                                <input type="text" id="right-label" placeholder="John">
-                            </div>
+            <div class="container-days">
+                <h3>Hours</h3>
+                <!-- Sunday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Sunday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="grid-x small-x">
-                        <div class="row">
-                            <div class="small-2 columns">
-                                <label for="right-label" class="right inline label-text-white">Last Name:</label>
-                            </div>
-                            <div class="columns">
-                                <input type="text" id="right-label" placeholder="Smith">
-                            </div>
+                <!-- Monday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Monday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="grid-x small-x">
-                        <div class="row">
-                            <div class="small-2 columns">
-                                <label for="right-label" class="right inline label-text-white">Days:</label>
-                            </div>
-                            <div class="columns">
-                                <input type="text" id="right-label" placeholder="Mon, Tue, Thu">
-                            </div>
+                <!-- Tuesday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Tuesday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="grid-x small-x">
-                        <div class="row">
-                            <div class="small-2 columns">
-                                <label for="right-label" class="right inline label-text-white">Times:</label>
-                            </div>
-                            <div class="columns">
-                                <input type="text" id="right-label" placeholder="9:00 AM - 5:00 PM">
-                            </div>
+                <!-- Wednesday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Wednesday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
                         </div>
                     </div>
                 </div>
-                <div class="column row modal-wrapper">
-                    <a class="button button-rounded-hover modal-submit-button">Submit</a>
+                <!-- Thursday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Thursday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
                 </div>
-            </form>
+                <!-- Friday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Friday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Saturday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Saturday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a class="button button-rounded-hover add-button">Add</a>
+                <a class="add-button cancel-button">Cancel</a>
+            </div>
+
         </div>
     </div>
 

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const createBtn = document.getElementById('create-shift-button');
     const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
-    const deleteBtn = document.getElementById('delete-shift-button');
+    const deleteBtn = document.getElementById('delete-schedule-button');
     const tdEls = document.querySelectorAll('td');
     const tdArray = Array.from(tdEls);
 
@@ -81,16 +81,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     const deleteSchedule = (e) => {
         e.stopPropagation();
-        const { id } = e.target.dataset;
-
-        fetch(`/portal/api/schedule/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+        console.log("delete clicked")
+        // const { id } = e.target.dataset;
+        const deleteIcon = document.getElementsByClassName('delete-icon')
+        console.log(deleteIcon);
+        deleteIcon.children.forEach((elem) => {
+            elem.setAttribute("style", "display: block")
         })
-            .then(getSchedules);
-    };
+    }
+    // deleteIcon.style.display = "block";
+    // fetch(`/portal/api/schedule/${id}`, {
+    //     method: 'DELETE',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    // })
+    //     .then(getSchedules);
+    // };
 
     createBtn.addEventListener("click", () => {
         createSchedule();
@@ -116,6 +123,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
-        deleteSchedule();
+        deleteSchedule(e);
     });
-});
+})

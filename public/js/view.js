@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const createSchedule = () => {
         const inputEls = document.querySelectorAll('input');
         console.log(inputEls)
+
         newSchedule = {
             // first_name: document.getElementById('create-first'),
             // last_name: document.getElementById('create-last'),
@@ -40,6 +41,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
             friday: document.getElementById('fri-start').value + " - " + document.getElementById('fri-stop').value,
             saturday: document.getElementById('sat-start').value + " - " + document.getElementById('sat-stop').value,
         }
+        if (newSchedule.sunday.length <= 3) {
+            newSchedule.sunday = '';
+        }
+        if (newSchedule.monday.length <= 3) {
+            newSchedule.monday = '';
+        }
+        if (newSchedule.tuesday.length <= 3) {
+            newSchedule.tuesday = '';
+        }
+        if (newSchedule.wednesday.length <= 3) {
+            newSchedule.wednesday = '';
+        }
+        if (newSchedule.thursday.length <= 3) {
+            newSchedule.thursday = '';
+        }
+        if (newSchedule.friday.length <= 3) {
+            newSchedule.friday = '';
+        }
+        if (newSchedule.sunday.length <= 3) {
+            newSchedule.sunday = '';
+        }
+        // switch ()
         console.log("Creating schedule")
         fetch('/portal/api/schedule', {
             method: 'POST',
@@ -53,7 +76,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 const schedules = data;
                 console.log("new schedule created")
                 // console.log('Employee Schedules: ', schedules)
-                // add function to display schedules
+                window.location.href = "/portal";
             });
     };
     const updateSchedule = (e) => {

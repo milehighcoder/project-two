@@ -49,9 +49,13 @@ app.get("/register", (req, res) => {
   // res.sendFile(path.join(__dirname, "./public/register.html"));
 });
 
-app.get("/me", apiAuth, (req, res) => {
-  const { user } = req;
-  return res.json(user);
+app.get("/portal", (req, res) => {
+  db.Employee.findAll().then((result) => {
+    const hbsObject = {
+      employees: result,
+    };
+    res.render("portal", hbsObject);
+  });
 });
 
 const {
@@ -62,13 +66,9 @@ const {
 app.post("/updateDetails", apiAuth, updateDetails);
 app.post("/changePassword", apiAuth, changePassword);
 
-app.get("/portal", (req, res) => {
-  db.Employee.findAll().then((result) => {
-    const hbsObject = {
-      employees: result,
-    };
-    res.render("portal", hbsObject);
-  });
+app.get("/me", apiAuth, (req, res) => {
+  const { user } = req;
+  return res.json(user);
 });
 
 // Syncing our sequelize models and then starting our Express app

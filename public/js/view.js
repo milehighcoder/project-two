@@ -1,6 +1,5 @@
 // const apiAuth = require("../middleware/apiAuth");
 document.addEventListener('DOMContentLoaded', (e) => {
-    // const viewBtn = document.getElementById('view-team-button');
     const createBtn = document.getElementById('create-shift-button');
     const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then((response) => response.json())
             .then((data) => {
                 const schedules = data;
-                console.log('Employee Schedules: ', schedules)
+                // console.log('Employee Schedules: ', schedules)
             });
     };
     const createSchedule = () => {
@@ -34,57 +33,55 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then((response) => response.json())
             .then((data) => {
                 const schedules = data;
-                console.log('Employee Schedules: ', schedules)
+                // console.log('Employee Schedules: ', schedules)
                 // add function to display schedules
             });
     };
     const updateSchedule = (e) => {
-        console.log('updating schedule...')
-        const sundayCell = document.getElementById(`sun-1`).innerHTML;
-        const mondayCell = document.getElementById(`mon-1`).innerHTML;
-        const tuesdayCell = document.getElementById(`tues-1`).innerHTML;
-        const wednesdayCell = document.getElementById(`wed-1`).innerHTML;
-        const thursdayCell = document.getElementById(`thur-1`).innerHTML;
-        const fridayCell = document.getElementById(`fri-1`).innerHTML;
-        const saturdayCell = document.getElementById(`sat-1`).innerHTML;
-
-        const scheduleChange = {
-            sunday: sundayCell.trim(),
-            monday: mondayCell.trim(),
-            tuesday: tuesdayCell.trim(),
-            wednesday: wednesdayCell.trim(),
-            thursday: thursdayCell.trim(),
-            friday: fridayCell.trim(),
-            saturday: saturdayCell.trim(),
-        }
-        // const itemEdit = e.target.children;
-        // for (let i = 0; i < itemEdit.length; i++) {
-        //     const currentEl = itemEdit[i];
-        //     if (currentEl.tagName === 'INPUT') {
-        //         currentEl.value = currentEl.parentElement.children[0].innerText;
-        //     }
-        // }
-        console.log("Updating schedules")
-        fetch(`/portal/api/schedule/1`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(scheduleChange)
+        const trEls = document.querySelectorAll('tr');
+        let scheduleChange;
+        trEls.forEach((elem, j) => {
+            let cellValueArray = [];
+            console.log("Iteration #" + j + "_____________________________")
+            console.log(elem.children[j].id)
+            cellValueArray.push(elem.children[0].id)
+            for (let i = 1; i <= elem.children.length; i++) {
+                console.log("in for loop")
+                let cellValue = elem.children[i - 1].textContent.trim();
+                cellValueArray.push(cellValue);
+            };
+            scheduleChange = {
+                id: cellValueArray[0],
+                first_name: cellValueArray[1],
+                sunday: cellValueArray[2],
+                monday: cellValueArray[3],
+                tuesday: cellValueArray[4],
+                wednesday: cellValueArray[5],
+                thursday: cellValueArray[6],
+                friday: cellValueArray[7],
+                saturday: cellValueArray[8],
+            }
+            console.log(scheduleChange)
+            const fetchId = scheduleChange.id;
+            console.log(`${fetchId}`)
+            fetch(`/portal/api/schedule/${fetchId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(scheduleChange)
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    const schedules = data;
+                    console.log(`Successfully added employe #${fetchId}`)
+                    location.href = "/portal";
+                });
         })
-            .then((response) => response.json())
-            .then((data) => {
-                const schedules = data;
-                console.log('Employee Schedules: ', schedules)
-                // add function to display schedules
-                location.href = "/portal";
-            });
-    };
+    }
     const deleteSchedule = (e) => {
         e.stopPropagation();
         const { id } = e.target.dataset;
-
-        console.log("Deleting schedule");
 
         fetch(`/portal/api/schedule/${id}`, {
             method: 'DELETE',
@@ -95,17 +92,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then(getSchedules);
     };
 
-    // viewBtn.addEventListener("click", () => {
-    //     console.log("clicked view");
-    //     getSchedules();
-    // });
     createBtn.addEventListener("click", () => {
-        console.log("clicked create");
         createSchedule();
     });
     editBtn.addEventListener("click", () => {
         console.log("clicked edit");
-        // console.log(tdArray)
         tdArray.forEach((elem) => {
             elem.setAttribute("contenteditable", true)
             if (elem.className === "day cell-morning-shift") {
@@ -118,19 +109,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         saveBtn.style.display = 'block';
     });
 
-    saveBtn.addEventListener("click", () => {
+    saveBtn.addEventListener("click", (e) => {
         console.log("clicked save");
-
-        updateSchedule();
+        updateSchedule(e);
     });
 
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
         deleteSchedule();
     });
-
-
-
-
-
 });

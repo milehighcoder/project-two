@@ -182,65 +182,262 @@
 
     <!-- Modal 2 (Create Schedule) -->
     <div id="Modal2" class="modal">
-      <!-- Modal content -->
+      <!-- Modal Content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <form class="form-wrapper-time-card">
-          <div>
-            <h3>Create Schedule</h3>
-          </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">First Name:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="John">
-                </div>
+        <div class="container-days">
+          <h3>Hours</h3>
+          <!-- Sunday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Sunday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Last Name:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="Smith">
-                </div>
+          <!-- Monday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Monday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Days:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="Mon, Tue, Thu">
-                </div>
+          <!-- Tuesday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Tuesday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="grid-x small-x">
-              <div class="row">
-                <div class="small-2 columns">
-                  <label for="right-label" class="right inline label-text-white">Times:</label>
-                </div>
-                <div class="columns">
-                  <input type="text" id="right-label" placeholder="9:00 AM - 5:00 PM">
-                </div>
+          <!-- Wednesday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Wednesday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
               </div>
             </div>
           </div>
-          <div class="column row modal-wrapper">
-            <a class="button button-rounded-hover modal-submit-button">Submit</a>
+          <!-- Thursday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Thursday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
+              </div>
+            </div>
           </div>
-        </form>
+          <!-- Friday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Friday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
+              </div>
+            </div>
+          </div>
+          <!-- Saturday -->
+          <div class="wrapper-days">
+            <div class="wrapper-small">
+              <div>
+                <p>Saturday</p>
+              </div>
+            </div>
+            <div class="wrapper-switch">
+              <div>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Start Time</label>
+              </div>
+            </div>
+            <div class="wrapper-small">
+              <div>
+                <p>to</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>End Time</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a class="button button-rounded-hover add-button">Add</a>
+          <a class="add-button cancel-button">Cancel</a>
+        </div>
+
       </div>
     </div>
 

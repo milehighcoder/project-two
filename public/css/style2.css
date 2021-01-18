@@ -122,7 +122,7 @@ h4 {
 }
 
 .calendar-edit-gray {
-  background-color: rgb(221, 221, 221, .9);
+  background-color: rgb(221, 221, 221, 0.9);
   color: black;
 }
 
@@ -298,6 +298,10 @@ span.number {
   padding-top: 7px;
 }
 
+.add-cancel-buttons {
+  margin-bottom: 110px;
+}
+
 /* MODAL */
 
 .modal {
@@ -376,6 +380,10 @@ span.number {
   margin-left: 25px;
 }
 
+.name-wrapper {
+  margin-left: 26px;
+}
+
 .wrapper-switch {
   width: 60px;
   display: inline-block;
@@ -388,13 +396,17 @@ span.number {
 }
 
 .container-days {
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .wrapper .input-data {
   height: 40px;
   width: 100%;
   position: relative;
+}
+
+.wrapper-employee-name {
+  margin-left: 10px;
 }
 
 .wrapper .input-data input {

@@ -4,60 +4,42 @@
 
 ## Description
 
-Managers are often tasked with creating schedules for their team of employees on a weekly or bi-weekly basis. This application accomplishes two things. It makes it easy for managers to create and manage their employee's schedules. It also allows employees to view their schedules, clock in and out, request a schedule change, and request vacation time. 
-
-## Project Requirements
-
-* Must use a Node and Express web server.
-* Must use Handlebars.js as the template engine.
-* Must be backed by a MySQL database with a Sequelize ORM.
-* Must have both GET and POST routes for retrieving and adding new data.
-* Must be deployed using Heroku (with data).
-* Must utilize at least one new library, package, or technology that hasn't been covered in class.
-* Must have a polished Front End/User Interface.
-* Must have a folder structure that meets the MVC paradigm.
-* Must meet good quality coding standards (indentation, scoping, naming, etc.).
-* Must protect API keys in Node with environment variables.
+When We Clean allows hotel cleaning crew managers to easily manage their team's schedules in a simple, high powered web-based application.
 
 ## Table of Contents
 
-* [Development Process](#development-process)
+* [Version History](#version-history)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 * [Questions](#questions)
 
-## Development Process
+## Version History
 
-PHASE 1
-
-Homepage
-
-* Clock-in and clock-out
-* Manager and Employee login authentication
-* Create new manager and employee accounts and receive email confirmation
-
-Manager Portal
-
-* View upcoming shifts
-* Update profile information
-* Create new employee schedule
-* Update employee schedule
-* Delete employee schedule
-
-Employee Portal
-
-* View upcoming schedule
-* Update profile information
-* Request schedule change
-* Request vacation time
+Version 1.0:
+* Create Manager Account
+* Login/Logout of Manager Portal
+* Manager Clock-In/Clock Out Time Card
+* Manager Work Hours Logged
+* Manager Update Profile and Change Password Capability
+* View Current Employee Schedules via Dashboard Calendar
+* Create New Employee Schedule
+* Edit Employee Schedule
+* Delete Employee Schedule
 
 ## Installation
 
+* Step 1: Install [Node.js](https://nodejs.org/).
+* Step 2: Clone this repository to your local drive.
+* Step 3: Open Git Bash (PC) or Terminal (Mac) and navigate to the root directory of this cloned repository.
+* Step 4: Enter `npm i` in the command line to install all dependencies detailed in the package.json file.
+* Step 5: Copy the `schema.sql` code located in the `db` directory. Paste the schema code in `MySQLWorkbench` and execture it in order to create the required database structure for this application. Make sure to input your own unique MySQL user and password credentials in the `config.json` file located in the `config` directorty.
+* Step 6: Enter `node server.js` or `nodemon server.js` in the terminal of your favorite coding editor and navigate to `localhost:3000` in your browser of choice to invoke the application.
+
 ## Usage
 
-As a Manager, I want to view, create, delete, and update employee schedules so that I can organize my team more efficiently. As an Employee, I want to view my schedule, request changes, and clock in/out. This application uses the following technologies:
+As a Manager, I want to view, create, delete, and update employee schedules so that I can organize my team more efficiently. I would also like to clock in and clock out of my shifts and view the hours that I have worked for the current week. This application uses the following technologies:
 
 * HTML
 * CSS
@@ -68,6 +50,7 @@ As a Manager, I want to view, create, delete, and update employee schedules so t
 * Express.js
 * MySQL
 * Sequelize ORM
+* Passport
 * Heroku
 
 ## Contributing
@@ -95,7 +78,7 @@ This project is MIT licensed.
 
 For more information about this application, please feel free to contact a member of our development team.
 
-* Rayna Veuleman
-* Mike Bannoura
-* Riley Costello
-* Mychal Martinez
+* [Rayna Veuleman](https://github.com/rayna-v)
+* [Mike Bannoura](https://github.com/bannoura9)
+* [Riley Costello](https://github.com/Milagro12090)
+* [Mychal Martinez](https://github.com/milehighcoder)

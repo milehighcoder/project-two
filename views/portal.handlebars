@@ -229,7 +229,23 @@
         <div id="Modal2-content" class="modal-content">
             <span class="close">&times;</span>
             <div class="container-days">
-                <h3>Hours</h3>
+                <h3>New Employee Schedule</h3>
+                <div class="name-wrapper">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="create-first" type="text" required>
+                            <div class="underline"></div>
+                            <label>First Name</label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="create-last" type="text" required>
+                            <div class="underline"></div>
+                            <label>Last Name</label>
+                        </div>
+                    </div>
+                </div>
                 <!-- Sunday -->
                 <div class="wrapper-days">
                     <div class="wrapper-small">
@@ -239,15 +255,15 @@
                     </div>
                     <div class="wrapper-switch">
                         <div>
-                            <label class="switch">
-                                <input type="checkbox">
+                            <label class="switch ">
+                                <input  id="sunday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
-                        <div class="input-data">
-                            <input id="sun-start" type="text" required>
+                        <div  class="input-data">
+                            <input onclick="check()" id="sun-start" class="sunday" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -259,7 +275,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="sun-stop" type="text" required>
+                            <input onclick="check()"  id="sun-stop" class="sunday" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>

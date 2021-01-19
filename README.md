@@ -78,7 +78,11 @@ This project is MIT licensed.
 
 For more information about this application, please feel free to contact a member of our development team.
 
-* [Rayna Veuleman](https://github.com/rayna-v)
-* [Mike Bannoura](https://github.com/bannoura9)
+Front End:
 * [Riley Costello](https://github.com/Milagro12090)
 * [Mychal Martinez](https://github.com/milehighcoder)
+
+Back End:
+* [Rayna Veuleman](https://github.com/rayna-v)
+* [Mike Bannoura](https://github.com/bannoura9)
+

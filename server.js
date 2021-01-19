@@ -1,8 +1,14 @@
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const Handlebars = require("handlebars");
+const {
+  allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8080;
+const apiAuth = require("./middleware/apiAuth");
+const PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -19,27 +25,51 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Routes
 const exphbs = require("express-handlebars");
 
-
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+  })
+);
+app.set("view engine", "handlebars");
 
 require("./routes/authRoutes")(app);
-require("./routes/htmlRoutes")(app);
+//require("./routes/htmlRoutes")(app);
 
 require("./routes/apiRoutes")(app);
 require("./routes/protectedViews")(app);
 
-
-app.get('/',(req, res) => {
-  res.render('index1');
+app.get("/", (req, res) => {
+  res.render("login");
 });
 
-app.get('/Portal',(req, res) => {
-  res.render('index2');
+app.get("/register", (req, res) => {
+  res.render("register");
+  // res.sendFile(path.join(__dirname, "./public/register.html"));
 });
 
+app.get("/portal", (req, res) => {
+  db.Employee.findAll().then((result) => {
+    const hbsObject = {
+      employees: result,
+    };
+    res.render("portal", hbsObject);
+  });
+});
 
+const {
+  updateDetails,
+  changePassword,
+} = require("./controllers/user.controller");
+
+app.post("/updateDetails", apiAuth, updateDetails);
+app.post("/changePassword", apiAuth, changePassword);
+
+app.get("/me", apiAuth, (req, res) => {
+  const { user } = req;
+  return res.json(user);
+});
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {

@@ -1,0 +1,28 @@
+<tr data-row>
+
+    <td id="{{id}}" class="emp"><span class="number">{{this.first_name}}</span><br>
+        <a class="delete-icon"><i class="fas fa-pencil-alt" style="display: show; font-size: 10px;"></i></a>
+    </td>
+
+    <td data-day="sunday" {{#if sunday}} class="day cell-morning-shift" id="sun-{{id}}" <span class="number">
+        {{this.sunday}}</span>{{/if}}
+        {{#unless sunday }} id="sun-{{id}}" class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="monday" id="mon-{{id}}" {{#if monday}} class="day cell-morning-shift" <span class="number">
+        {{this.monday}}</span>{{/if}}
+        {{#unless monday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="tuesday" id="tues-{{id}}" {{#if tuesday}} class="day cell-morning-shift" <span class="number">
+        {{this.tuesday}}</span>{{/if}}
+        {{#unless tuesday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="wednesday" id="wed-{{id}}" {{#if wednesday}} class="day cell-morning-shift" <span class="number">
+        {{this.wednesday}}</span>{{/if}}
+        {{#unless wednesday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="thursday" id="thur-{{id}}" {{#if thursday}} class="day cell-morning-shift" <span class="number">
+        {{this.thursday}}</span>{{/if}}
+        {{#unless thursday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="friday" id="fri-{{id}}" {{#if friday}} class="day cell-morning-shift" <span class="number">
+        {{this.friday}}</span>{{/if}}
+        {{#unless friday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+    <td data-day="saturday" id="sat-{{id}}" {{#if saturday}} class="day cell-morning-shift" <span class="number">
+        {{this.saturday}}</span>{{/if}}
+        {{#unless saturday }} class="day cell-off-day" <span class="number"> </span>{{/unless}} </td>
+</tr>

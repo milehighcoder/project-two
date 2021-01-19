@@ -1,0 +1,592 @@
+<!-- Navbar -->
+<div class="md-tabs">
+    <div class="mobile-nav-bar title-bar">
+        <div class="title-bar-center">
+            <!-- Logo -->
+            <span class="title-bar-text">
+                <img src="assets/img/when-we-clean-logo.png" alt="" class="imgHead">
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Dashboard Container -->
+<div class="row columns">
+    <!-- Sidebar -->
+    <div class="columns large-4">
+        <!-- Time Card -->
+        <div class="translucent-form-overlay">
+            <form class="form-wrapper-time-card">
+                <div>
+                    <h2>Time Card</h2>
+                    <p class="gray-subtitle-text">January 13, 2021</p>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                            </div>
+                            <!-- Time Display -->
+                            <div class="columns">
+                                <h1 id="timer">00:00:00</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Clock In and Out Buttons -->
+                <div class="row">
+                    <a id="clock-in-button" class="button button-rounded-hover" onclick="startTimer(this)">
+                        <h4>IN</h4>
+                    </a>
+                    <a id="clock-out-button" class="button button-rounded-hover" onclick="resetTimer()">
+                        <h4>OUT</h4>
+                    </a>
+                </div>
+        </div>
+        <br>
+        <!-- Manage Team Card (THIS WILL BE DELETED AT SOME POINT) -->
+        <div class="translucent-form-overlay">
+            <h2>Hours Logged</h2>
+            <ul>
+                <li>Sunday: 7 hours</li>
+                <li>Monday: 4 hours</li>
+                <li>Tuesday: 0 hours</li>
+                <li>Wednesday: 0 hours</li>
+                <li>Thursday: 8 hours</li>
+                <li>Friday: 8 hours</li>
+                <li>Saturday: 6 hours</li>
+                <li>Total: 33 hours</li>
+
+            </ul>
+        </div>
+        <br>
+
+        <br>
+        <!-- My Profile Card (THIS WILL BE DELETED AT SOME POINT) -->
+        <div id="my-profile-card" class="translucent-form-overlay">
+            <div>
+                <h2>My Profile</h2>
+                <p id="manager-name-container" class="gray-subtitle-text">Manager Name</p>
+            </div>
+            <div class="column row manage-team-button-wrapper">
+                <a class="button button-rounded-hover manage-team-button-stack myBtn"
+                    id="show-update-profile-button">Update Profile</a>
+
+                <a class="button button-rounded-hover manage-team-button-stack myBtn"
+                    id="show-update-password-button">Change Password</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 (Update Profile) -->
+    <div id="Modal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="form-wrapper-time-card">
+                <div>
+                    <h3>Update Profile</h3>
+                    <p class="gray-subtitle-text">Employee Name</p>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">First Name:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="update-first-name" placeholder="John">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">Last Name:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="update-last-name" placeholder="Smith">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">Phone Number:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="update-phone" placeholder="123-456-7890">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">Email:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="update-email" placeholder="example@example.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">Current Password:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="right-label" placeholder="xxxxxxxxxx">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="right-label" class="right inline label-text-white">New Password:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="text" id="right-label" placeholder="xxxxxxxxxx">
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="column row modal-wrapper">
+                    <a id="update-profile-button" class="button button-rounded-hover modal-submit-button">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2 (Change Password) -->
+    <div id="Modal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="change-password-modal-close-btn" class="close">&times;</span>
+            <form class="form-wrapper-time-card">
+                <div>
+                    <h3>Change Password</h3>
+                    <p class="gray-subtitle-text">Employee Name</p>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="current-password" class="right inline label-text-white">Current
+                                    Password:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="password" id="current-password" placeholder="xxxxxxxxxx">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="new-password" class="right inline label-text-white">New Password:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="password" id="new-password" placeholder="xxxxxxxxxx">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid-x small-x">
+                        <div class="row">
+                            <div class="small-2 columns">
+                                <label for="confirm-new-password" class="right inline label-text-white">New
+                                    Password:</label>
+                            </div>
+                            <div class="columns">
+                                <input type="password" id="confirm-new-password" placeholder="xxxxxxxxxx">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column row modal-wrapper">
+                    <a id="update-password-button" class="button button-rounded-hover modal-submit-button">Update
+                        Password</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 3 (Create Schedule) -->
+    <div id="Modal3" class="modal">
+        <!-- Modal Content -->
+        <div id="Modal2-content" class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container-days">
+                <h3>New Employee Schedule</h3>
+                <div class="name-wrapper">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="create-first" type="text" required>
+                            <div class="underline"></div>
+                            <label>First Name</label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="create-last" type="text" required>
+                            <div class="underline"></div>
+                            <label>Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sunday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Sunday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch ">
+                                <input id="sunday-switch" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input onclick="checkSunday()" id="sun-start" class="sunday" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input onclick="checkSunday()" id="sun-stop" class="sunday" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Monday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Monday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input id="monday-switch" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input onclick="checkMonday()" data-shift="mon" id="mon-start" class="monday" type="text"
+                                required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input onclick="checkMonday()" data-shift="mon" id="mon-stop" class="monday" type="text"
+                                required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tuesday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Tuesday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="tues-start" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="tues-stop" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wednesday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Wednesday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="wed-start" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="wed-stop" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thursday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Thursday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="thur-start" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="thur-stop" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Friday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Friday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="fri-start" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="fri-stop" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Saturday -->
+                <div class="wrapper-days">
+                    <div class="wrapper-small">
+                        <div>
+                            <p>Saturday</p>
+                        </div>
+                    </div>
+                    <div class="wrapper-switch">
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="sat-start" type="text" required>
+                            <div class="underline"></div>
+                            <label>Start Time</label>
+                        </div>
+                    </div>
+                    <div class="wrapper-small">
+                        <div>
+                            <p>to</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input id="sat-stop" type="text" required>
+                            <div class="underline"></div>
+                            <label>End Time</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a id="add-button" class="button button-rounded-hover add-button">Add</a>
+                <a class="add-button cancel-button">Cancel</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Calendar Dashboard -->
+    <div>
+        <!-- Calendar Wrapper -->
+        <div class="columns large-8">
+            <!-- Date Display -->
+            <span>
+                <h1>January 2021</h1>
+            </span>
+            <!-- Dropdown Button -->
+            <div class="dropdown">
+                <a onclick="myFunction()" class="button button-rounded-hover dropbtn"><i
+                        class="fas fa-caret-down"></i></i></a>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="edit-button" href="#">Edit Schedule</a>
+                    <a id="delete-schedule-button" href="#">Delete Schedule</a>
+                </div>
+            </div>
+            <!-- Create Schedule Button -->
+
+            <a id="create-shift-button" class="button button-rounded-hover myBtn create-shift-button">Create
+                Schedule</a>
+            <a id="save-button" class="button button-rounded-hover myBtn save-button">Save
+                Schedule</a>
+            <table>
+                <tr>
+                    <th class="emp-name">Employee</th>
+                    <th class="day-name">Sun</th>
+                    <th class="day-name">Mon</th>
+                    <th class="day-name">Tue</th>
+                    <th class="day-name">Wed</th>
+                    <th class="day-name">Thu</th>
+                    <th class="day-name">Fri</th>
+                    <th class="day-name">Sat</th>
+                </tr>
+                {{#each employees}}
+                {{> schedules/schedule-block this }}
+                {{/each}}
+                {{!-- <tr>
+                    <td class="emp"><span class="number">Sarah</span></td>
+                    <td class="day cell-night-shift"><span class="number">Night</span></td>
+                    <td class="day cell-night-shift"><span class="number">Night</span></td>
+                    <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+                    <td class="day cell-night-shift"><span class="number">Night</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+                </tr> --}}
+                {{!-- <tr>
+                    <td class="emp"><span class="number">Carlos</span></td>
+                    <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+                    <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+                    <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-morning-shift"><span class="number">Morning</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+                </tr>
+                <tr>
+                    <td class="emp"><span class="number">Victor</span></td>
+                    <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+                    <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+                    <td class="day cell-swing-shift"><span class="number">Swing</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-off-day"><span class="number">Off</span></td>
+                    <td class="day cell-night-shift"><span class="number">Night</span></td>
+                    <td class="day cell-night-shift"><span class="number">Night</span></td>
+                </tr>
+                <tr>
+                    <td class="emp"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>
+                    <td class="day"><span class="number"></span></td>--}}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/script2.js" type="text/javascript"></script>
+<script src="js/user.js" type="text/javascript"></script>
+<script src="js/view.js" type="text/javascript"></script>

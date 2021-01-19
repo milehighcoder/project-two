@@ -1,6 +1,8 @@
 <tr data-row>
 
-    <td id="{{id}}" class="emp"><span class="number">{{this.first_name}}</span></td>
+    <td id="{{id}}" class="emp"><span class="number">{{this.first_name}}</span><br>
+        <a class="delete-icon"><i class="fas fa-calendar-times" style="display: show; font-size: 24px;"></i></a>
+    </td>
 
     <td data-day="sunday" {{#if sunday}} class="day cell-morning-shift" id="sun-{{id}}" <span class="number">
         {{this.sunday}}</span>{{/if}}

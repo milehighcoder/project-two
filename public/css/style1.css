@@ -1,8 +1,13 @@
 body {
   background-color: black !important;
 }
+
+#logo {
+ 
+}
+
 .translucent-form-overlay {
-  position: fixed;
+
   top: 35%;
   left: 50%;
   width: 30em;
@@ -146,8 +151,7 @@ body {
   opacity: 0.8;
 }
 
-.sign-in-form-username
-.sign-in-form-password {
+.sign-in-form-username .sign-in-form-password {
   border-radius: 5%;
   border: none;
   opacity: 0.1;

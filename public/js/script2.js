@@ -125,7 +125,7 @@ const sunStart = document.getElementById("sun-stop").innerHTML;
 
 console.log(sunStart);
 
-//create check function
+//create check function 
 function check() {
   let inputs = document.getElementById('sunday-switch');
   inputs.checked = true;

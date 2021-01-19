@@ -256,15 +256,16 @@
                     </div>
                     <div class="wrapper-switch">
                         <div>
-                            <label class="switch">
-                                <input type="checkbox">
+                            <label class="switch ">
+                                <input data-toggle="sun" id="sunday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="sun-start" type="text" required>
+                            <input onclick="check()" data-shift="sun" id="sun-start" class="sunday" type="text"
+                                required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -276,7 +277,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="sun-stop" type="text" required>
+                            <input onclick="check()" data-shift="sun" id="sun-stop" class="sunday" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>

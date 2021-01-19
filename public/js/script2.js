@@ -119,42 +119,105 @@ function durationTime() {
 //SUNDAY
 document.getElementById("sunday-switch").onchange = function () {
   document.getElementById("sun-start").value = "";
+  document.getElementById("sun-stop").value = "";
 };
 
 function checkSunday() {
   let inputs = document.getElementById('sunday-switch');
   inputs.checked = true;
-  if (document.getElementById('sun-start').value.length == 0) {
-    console.log("inside conditional-2")
-    document.getElementById('Modal3').addEventListener("click", (e) => {
-      let inputs = document.getElementById('sunday-switch');
-      if (!(e.target).closest(".sunday")
-      ) {
-        inputs.checked = false;
-      }
-    }, false);
-  }
+  document.getElementById("sunday-switch").onchange = function () {
+    document.getElementById("sun-start").value = "";
+    document.getElementById("sun-stop").value = "";
+  };
 }
 //MONDAY
 document.getElementById("monday-switch").onchange = function () {
   document.getElementById("mon-start").value = "";
+  document.getElementById("mon-stop").value = "";
 };
 
 function checkMonday() {
   let inputs = document.getElementById('monday-switch');
   inputs.checked = true;
-  if (document.getElementById('mon-start').value.length == 0) {
-    console.log("inside conditional-2")
-    document.getElementById('Modal3').addEventListener("click", (e) => {
-      let inputs = document.getElementById('monday-switch');
-      if (!(e.target).closest(".monday")
-      ) {
-        inputs.checked = false;
-      }
-    }, false);
-  }
+  document.getElementById("monday-switch").onchange = function () {
+    document.getElementById("mon-start").value = "";
+    document.getElementById("mon-stop").value = "";
+  };
+
+}
+//TUESDAY
+document.getElementById("tuesday-switch").onchange = function () {
+  document.getElementById("tues-start").value = "";
+  document.getElementById("tues-stop").value = "";
+};
+
+function checkTuesday() {
+  let inputs = document.getElementById('tuesday-switch');
+  inputs.checked = true;
+  document.getElementById("tuesday-switch").onchange = function () {
+    document.getElementById("tues-start").value = "";
+    document.getElementById("tues-stop").value = "";
+  };
 }
 
-window.onload = function () {
-  window.addEventListener('load', check, false);
+//WEDNESDAY
+document.getElementById("wednesday-switch").onchange = function () {
+  document.getElementById("wed-start").value = "";
+  document.getElementById("wed-stop").value = "";
+};
+
+function checkWednesday() {
+  let inputs = document.getElementById('wednesday-switch');
+  inputs.checked = true;
+  document.getElementById("wednesday-switch").onchange = function () {
+    document.getElementById("wed-start").value = "";
+    document.getElementById("wed-stop").value = "";
+  };
 }
+//THURSDAY
+document.getElementById("thursday-switch").onchange = function () {
+  document.getElementById("thur-start").value = "";
+  document.getElementById("thur-stop").value = "";
+};
+
+function checkThursday() {
+  let inputs = document.getElementById('thursday-switch');
+  inputs.checked = true;
+  document.getElementById("thursday-switch").onchange = function () {
+    document.getElementById("thur-start").value = "";
+    document.getElementById("thur-stop").value = "";
+  };
+}
+//FRIDAY
+document.getElementById("friday-switch").onchange = function () {
+  document.getElementById("fri-start").value = "";
+  document.getElementById("fri-stop").value = "";
+};
+
+function checkFriday() {
+  let inputs = document.getElementById('friday-switch');
+  inputs.checked = true;
+  document.getElementById("friday-switch").onchange = function () {
+    document.getElementById("fri-start").value = "";
+    document.getElementById("fri-stop").value = "";
+  };
+}
+//SATURDAY
+document.getElementById("saturday-switch").onchange = function () {
+  document.getElementById("sat-start").value = "";
+  document.getElementById("sat-stop").value = "";
+};
+
+function checkSaturday() {
+  let inputs = document.getElementById('saturday-switch');
+  inputs.checked = true;
+  document.getElementById("saturday-switch").onchange = function () {
+    document.getElementById("sat-start").value = "";
+    document.getElementById("sat-stop").value = "";
+  };
+
+}
+
+// window.onload = function () {
+//   window.addEventListener('load', check, false);
+// }

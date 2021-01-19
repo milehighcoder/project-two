@@ -116,19 +116,43 @@ function durationTime() {
 // TIME CARD END
 
 // CREATE SCHEDULE SWITCH
+//SUNDAY
 document.getElementById("sunday-switch").onchange = function () {
-  // document.getElementById("sun-start").disabled = !this.checked;
   document.getElementById("sun-start").value = "";
 };
 
-const sunStart = document.getElementById("sun-stop").innerHTML;
-
-console.log(sunStart);
-
-//create check function 
-function check() {
+function checkSunday() {
   let inputs = document.getElementById('sunday-switch');
   inputs.checked = true;
+  if (document.getElementById('sun-start').value.length == 0) {
+    console.log("inside conditional-2")
+    document.getElementById('Modal3').addEventListener("click", (e) => {
+      let inputs = document.getElementById('sunday-switch');
+      if (!(e.target).closest(".sunday")
+      ) {
+        inputs.checked = false;
+      }
+    }, false);
+  }
+}
+//MONDAY
+document.getElementById("monday-switch").onchange = function () {
+  document.getElementById("mon-start").value = "";
+};
+
+function checkMonday() {
+  let inputs = document.getElementById('monday-switch');
+  inputs.checked = true;
+  if (document.getElementById('mon-start').value.length == 0) {
+    console.log("inside conditional-2")
+    document.getElementById('Modal3').addEventListener("click", (e) => {
+      let inputs = document.getElementById('monday-switch');
+      if (!(e.target).closest(".monday")
+      ) {
+        inputs.checked = false;
+      }
+    }, false);
+  }
 }
 
 window.onload = function () {

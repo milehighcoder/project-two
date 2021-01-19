@@ -263,7 +263,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input onclick="check()" id="sun-start" class="sunday" type="text" required>
+                            <input onclick="checkSunday()" id="sun-start" class="sunday" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -275,7 +275,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input onclick="check()" id="sun-stop" class="sunday" type="text" required>
+                            <input onclick="checkSunday()" id="sun-stop" class="sunday" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -291,14 +291,15 @@
                     <div class="wrapper-switch">
                         <div>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input id="monday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="mon-start" type="text" required>
+                            <input onclick="checkMonday()" data-shift="mon" id="mon-start" class="monday" type="text"
+                                required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -310,7 +311,8 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="mon-stop" type="text" required>
+                            <input onclick="checkMonday()" data-shift="mon" id="mon-stop" class="monday" type="text"
+                                required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>

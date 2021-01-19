@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             });
     };
 
-
     // CREATE New Schedule --->  POST
     const createSchedule = () => {
         // object to store user response from Modal3 (create schedule)

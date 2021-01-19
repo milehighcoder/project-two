@@ -114,3 +114,23 @@ function durationTime() {
   }
 }
 // TIME CARD END
+
+// CREATE SCHEDULE SWITCH
+document.getElementById("sunday-switch").onchange = function () {
+  // document.getElementById("sun-start").disabled = !this.checked;
+  document.getElementById("sun-start").value = "";
+};
+
+const sunStart = document.getElementById("sun-stop").innerHTML;
+
+console.log(sunStart);
+
+//create check function 
+function check() {
+  let inputs = document.getElementById('sunday-switch');
+  inputs.checked = true;
+}
+
+window.onload = function() {
+  window.addEventListener('load', check, false);
+}

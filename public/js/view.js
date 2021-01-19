@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         console.log(inputEls)
 
         newSchedule = {
-            // first_name: document.getElementById('create-first'),
-            // last_name: document.getElementById('create-last'),
+            // first_name: document.getElementById('create-first').value,
+            // last_name: document.getElementById('create-last').value,
             sunday: document.getElementById('sun-start').value + " - " + document.getElementById('sun-stop').value,
             monday: document.getElementById('mon-start').value + " - " + document.getElementById('mon-stop').value,
             tuesday: document.getElementById('tues-start').value + " - " + document.getElementById('tues-stop').value,
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         if (newSchedule.friday.length <= 3) {
             newSchedule.friday = '';
         }
-        if (newSchedule.sunday.length <= 3) {
-            newSchedule.sunday = '';
+        if (newSchedule.saturday.length <= 3) {
+            newSchedule.saturday = '';
         }
         // switch ()
         console.log("Creating schedule")

@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const createBtn = document.getElementById('create-shift-button');
     const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
-    const deleteBtn = document.getElementById('delete-schedule-button');
+    const addBtn = document.getElementById('add-button');
+    const deleteBtn = document.getElementById('delete-shift-button');
     const tdEls = document.querySelectorAll('td');
+    const modal2 = document.getElementById('Modal2-content');
+    const outerModal = document.getElementById('Modal2')
     const tdArray = Array.from(tdEls);
 
     const getSchedules = () => {
@@ -22,19 +25,58 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 // console.log('Employee Schedules: ', schedules)
             });
     };
+
     const createSchedule = () => {
+        const inputEls = document.querySelectorAll('input');
+        console.log(inputEls)
+
+        newSchedule = {
+            // first_name: document.getElementById('create-first').value,
+            // last_name: document.getElementById('create-last').value,
+            sunday: document.getElementById('sun-start').value + " - " + document.getElementById('sun-stop').value,
+            monday: document.getElementById('mon-start').value + " - " + document.getElementById('mon-stop').value,
+            tuesday: document.getElementById('tues-start').value + " - " + document.getElementById('tues-stop').value,
+            wednesday: document.getElementById('wed-start').value + " - " + document.getElementById('wed-stop').value,
+            thursday: document.getElementById('thur-start').value + " - " + document.getElementById('thur-stop').value,
+            friday: document.getElementById('fri-start').value + " - " + document.getElementById('fri-stop').value,
+            saturday: document.getElementById('sat-start').value + " - " + document.getElementById('sat-stop').value,
+        }
+        if (newSchedule.sunday.length <= 3) {
+            newSchedule.sunday = '';
+        }
+        if (newSchedule.monday.length <= 3) {
+            newSchedule.monday = '';
+        }
+        if (newSchedule.tuesday.length <= 3) {
+            newSchedule.tuesday = '';
+        }
+        if (newSchedule.wednesday.length <= 3) {
+            newSchedule.wednesday = '';
+        }
+        if (newSchedule.thursday.length <= 3) {
+            newSchedule.thursday = '';
+        }
+        if (newSchedule.friday.length <= 3) {
+            newSchedule.friday = '';
+        }
+        if (newSchedule.saturday.length <= 3) {
+            newSchedule.saturday = '';
+        }
+        // switch ()
         console.log("Creating schedule")
         fetch('/portal/api/schedule', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
+            body: JSON.stringify(newSchedule)
         })
             .then((response) => response.json())
             .then((data) => {
                 const schedules = data;
+                console.log("new schedule created")
                 // console.log('Employee Schedules: ', schedules)
-                // add function to display schedules
+                window.location.href = "/portal";
             });
     };
     const updateSchedule = (e) => {
@@ -99,9 +141,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
     //     .then(getSchedules);
     // };
 
-    createBtn.addEventListener("click", () => {
+    addBtn.addEventListener("click", () => {
         createSchedule();
+        modal2.style.display = "none";
+        outerModal.style.display = "none"
     });
+
     editBtn.addEventListener("click", () => {
         console.log("clicked edit");
         tdArray.forEach((elem) => {

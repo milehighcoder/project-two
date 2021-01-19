@@ -64,19 +64,19 @@
           </div>
       </div>
       <br>
-      <!-- Manage Team Card (THIS WILL BE DELETED AT SOME POINT) -->
+      <!-- HOURS LOGGED CARD -->
       <div class="translucent-form-overlay">
-        <div>
-          <h2>Manage Team</h2>
-          <p class="gray-subtitle-text">Manager Team Name</p>
-        </div>
-        <!-- Button Stack -->
-        <div class="column row manage-team-button-wrapper">
-          <a id="view-team-button" class="button button-rounded-hover manage-team-button-stack">View Shifts</a>
-          <a id="create-shift-button" class="button button-rounded-hover manage-team-button-stack">Create Shift</a>
-          <a id="update-shift-button" class="button button-rounded-hover manage-team-button-stack">Update Shift</a>
-          <a id="delete-shift-button" class="button button-rounded-hover manage-team-button-stack">Delete Shift</a>
-        </div>
+        <h2>Hours Logged</h2>
+        <ul>
+          <li>Sunday: 7 hours</li>
+          <li>Monday: 4 hours</li>
+          <li>Tuesday: 0 hours</li>
+          <li>Wednesday: 0 hours</li>
+          <li>Thursday: 8 hours</li>
+          <li>Friday: 8 hours</li>
+          <li>Saturday: 6 hours</li>
+          <li>Total: 33 hours</li>
+        </ul>
       </div>
       <br>
       <!-- My Profile Card (THIS WILL BE DELETED AT SOME POINT) -->
@@ -186,7 +186,24 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="container-days">
-          <h3>Hours</h3>
+          <h3>New Employee Schedule</h3>
+          <!-- Employee Name Field -->
+          <div class="name-wrapper">
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>First Name</label>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Last Name</label>
+              </div>
+            </div>
+          </div>
           <!-- Sunday -->
           <div class="wrapper-days">
             <div class="wrapper-small">
@@ -433,7 +450,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="add-cancel-buttons">
           <a class="button button-rounded-hover add-button">Add</a>
           <a class="add-button cancel-button">Cancel</a>
         </div>

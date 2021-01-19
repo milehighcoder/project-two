@@ -1,15 +1,16 @@
 // const apiAuth = require("../middleware/apiAuth");
 document.addEventListener('DOMContentLoaded', (e) => {
-    const createBtn = document.getElementById('create-shift-button');
+    // storing locations of elements to traverse the DOM
     const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
     const addBtn = document.getElementById('add-button');
-    const deleteBtn = document.getElementById('delete-shift-button');
+    const deleteBtn = document.getElementById('delete-schedule-button');
     const tdEls = document.querySelectorAll('td');
     const modal2 = document.getElementById('Modal2-content');
     const outerModal = document.getElementById('Modal2')
     const tdArray = Array.from(tdEls);
 
+    // READ Schedules --->  GET
     const getSchedules = () => {
         console.log("getting schedules")
         fetch('/portal/api/schedule', {
@@ -26,13 +27,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
             });
     };
 
-    const createSchedule = () => {
-        const inputEls = document.querySelectorAll('input');
-        console.log(inputEls)
 
-        newSchedule = {
-            // first_name: document.getElementById('create-first').value,
-            // last_name: document.getElementById('create-last').value,
+    // CREATE New Schedule --->  POST
+    const createSchedule = () => {
+        // object to store user response from Modal3 (create schedule)
+        let newSchedule = {
+            first_name: document.getElementById('create-first').value,
+            last_name: document.getElementById('create-last').value,
             sunday: document.getElementById('sun-start').value + " - " + document.getElementById('sun-stop').value,
             monday: document.getElementById('mon-start').value + " - " + document.getElementById('mon-stop').value,
             tuesday: document.getElementById('tues-start').value + " - " + document.getElementById('tues-stop').value,
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             friday: document.getElementById('fri-start').value + " - " + document.getElementById('fri-stop').value,
             saturday: document.getElementById('sat-start').value + " - " + document.getElementById('sat-stop').value,
         }
+        // conditional that checks if values were entered for shifts
         if (newSchedule.sunday.length <= 3) {
             newSchedule.sunday = '';
         }
@@ -62,8 +64,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         if (newSchedule.saturday.length <= 3) {
             newSchedule.saturday = '';
         }
-        // switch ()
-        console.log("Creating schedule")
+        // POST request using newSchedule object
         fetch('/portal/api/schedule', {
             method: 'POST',
             headers: {
@@ -75,23 +76,26 @@ document.addEventListener('DOMContentLoaded', (e) => {
             .then((data) => {
                 const schedules = data;
                 console.log("new schedule created")
-                // console.log('Employee Schedules: ', schedules)
                 window.location.href = "/portal";
             });
     };
+
+    // UPDATE Schedules --->  PUT
     const updateSchedule = (e) => {
+        // selects all table rows (each employee schedule)
         const trEls = document.querySelectorAll('tr');
         let scheduleChange;
+        // 
         trEls.forEach((elem, j) => {
+            // Array to hold the cell data from each row (to use as edited schedule values)
             let cellValueArray = [];
-            console.log("Iteration #" + j + "_____________________________")
-            console.log(elem.children[j].id)
             cellValueArray.push(elem.children[0].id)
+            // Iteration through each day in schedule to store text content in array
             for (let i = 1; i <= elem.children.length; i++) {
-                console.log("in for loop")
                 let cellValue = elem.children[i - 1].textContent.trim();
                 cellValueArray.push(cellValue);
             };
+            // Create edited schedule based on values in array
             scheduleChange = {
                 id: cellValueArray[0],
                 first_name: cellValueArray[1],
@@ -103,9 +107,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 friday: cellValueArray[7],
                 saturday: cellValueArray[8],
             }
-            console.log(scheduleChange)
+            // stores employee id to use in PUT request
             const fetchId = scheduleChange.id;
-            console.log(`${fetchId}`)
             fetch(`/portal/api/schedule/${fetchId}`, {
                 method: 'PUT',
                 headers: {
@@ -117,57 +120,77 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 .then((data) => {
                     const schedules = data;
                     console.log(`Successfully added employe #${fetchId}`)
-                    location.href = "/portal";
+                    window.location.href = "/portal";
                 });
         })
     }
+
+    // DELETE Schedules --->  DELETE
     const deleteSchedule = (e) => {
         e.stopPropagation();
-        console.log("delete clicked")
-        // const { id } = e.target.dataset;
-        const deleteIcon = document.getElementsByClassName('delete-icon')
-        console.log(deleteIcon);
-        deleteIcon.children.forEach((elem) => {
-            elem.setAttribute("style", "display: block")
-        })
+        const deleteIcon = document.getElementsByClassName('delete-icon');
+        // DELETE function when icon is clicked
+        const deleteRow = (e) => {
+            // grabs employee id from parent, parent node
+            const parentId = e.target.parentNode.parentNode.id
+            // confirm the delete
+            let confirmDelete = confirm("Are you sure you want to delete this employee schedule?")
+            // if confirmed, run the fetch delete call
+            if (confirmDelete) {
+                fetch(`/portal/api/schedule/${parentId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log(`Successfully removed employe #${fetchId}`)
+                    });
+            }
+            // refresh window to update schedule
+            window.location.href = "/portal";
+        };
+        // add event listeners to delete icons
+        for (let i = 0; i < deleteIcon.length; i++) {
+            deleteIcon[i].addEventListener('click', deleteRow);
+        }
     }
-    // deleteIcon.style.display = "block";
-    // fetch(`/portal/api/schedule/${id}`, {
-    //     method: 'DELETE',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    // })
-    //     .then(getSchedules);
-    // };
 
+    // BUTTON Event Handlers
+    // Add Button on Modal for 'Create Schedule'
     addBtn.addEventListener("click", () => {
         createSchedule();
         modal2.style.display = "none";
         outerModal.style.display = "none"
     });
 
+    // Edit Button on Dropdown Menu for Schedule
     editBtn.addEventListener("click", () => {
-        console.log("clicked edit");
+        // assigns editable attribute to each <td>
         tdArray.forEach((elem) => {
             elem.setAttribute("contenteditable", true)
+            // conditional to set class based on days on or off
             if (elem.className === "day cell-morning-shift") {
                 elem.className = "day calendar-edit-blue"
             } else {
                 elem.className = "calendar-edit-gray"
             }
         })
-        createBtn.style.display = 'none';
+        // shows 'save' button during editing process (until clicked)
         saveBtn.style.display = 'block';
     });
 
+    // Save Button for Edited Schedule (shows during editing)
     saveBtn.addEventListener("click", (e) => {
         console.log("clicked save");
         updateSchedule(e);
     });
 
+    // Delete Button on Dropdown Menu to remove Schedule
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
         deleteSchedule(e);
     });
+
 })

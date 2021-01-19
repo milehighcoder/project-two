@@ -302,6 +302,30 @@ span.number {
   margin-bottom: 110px;
 }
 
+.logout-wrapper {
+  position:relative;
+  display: inline;
+}
+
+#nav-ul {
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-li {
+  background: none;
+  border: none;
+  float: right;
+  margin-top: 17px;
+  margin-right: 22px;
+}
+
+#nav-li a:hover {
+  color: #4385f4;
+}
+
 /* MODAL */
 
 .modal {
@@ -509,7 +533,6 @@ span.number {
 
 /* TOGGLE SWITCH */
 
-/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -518,14 +541,12 @@ span.number {
   padding-top: 16px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -565,7 +586,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }

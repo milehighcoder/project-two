@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-
     "password": "RebelUnlv15*",
-
     "database": "hotel_schedulerDB",
     "host": "127.0.0.1",
     "dialect": "mysql"

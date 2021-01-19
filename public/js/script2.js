@@ -125,12 +125,12 @@ const sunStart = document.getElementById("sun-stop").innerHTML;
 
 console.log(sunStart);
 
-//create check function 
+//create check function
 function check() {
-  let inputs = document.getElementById('sunday-switch');
+  let inputs = document.getElementById("sunday-switch");
   inputs.checked = true;
 }
 
-window.onload = function() {
-  window.addEventListener('load', check, false);
-}
+window.onload = function () {
+  window.addEventListener("load", check, false);
+};

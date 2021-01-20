@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         alert(data.message);
       })
       .catch((error) => (location.href = "/"));
+    window.location.href = "/portal";
   };
 
   const resetPasswordForm = () => {
@@ -153,6 +154,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       resetPasswordForm();
       return;
     }
+    window.location.href = "/portal";
   };
 
   // showUpdateProfileButton.addEventListener("click", );

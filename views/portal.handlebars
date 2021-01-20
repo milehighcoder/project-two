@@ -299,8 +299,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input onclick="checkMonday()" data-shift="mon" id="mon-start" class="monday" type="text"
-                                required>
+                            <input onclick="checkMonday()" id="mon-start" class="monday" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -312,8 +311,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input onclick="checkMonday()" data-shift="mon" id="mon-stop" class="monday" type="text"
-                                required>
+                            <input onclick="checkMonday()" id="mon-stop" class="monday" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -329,14 +327,14 @@
                     <div class="wrapper-switch">
                         <div>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input id="tuesday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="tues-start" type="text" required>
+                            <input onclick="checkTuesday()" id="tues-start" type="text" class="tuesday" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -348,7 +346,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="tues-stop" type="text" required>
+                            <input onclick="checkTuesday()" id="tues-stop" type="text" class="tuesday" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -363,15 +361,15 @@
                     </div>
                     <div class="wrapper-switch">
                         <div>
-                            <label class="switch">
-                                <input type="checkbox">
+                            <label class="switch wednesday-switch">
+                                <input id="wednesday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="wed-start" type="text" required>
+                            <input onclick="checkWednesday()" id="wed-start" type="text" class="wednesday" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -383,7 +381,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="wed-stop" type="text" required>
+                            <input onclick="checkWednesday()" id="wed-stop" type="text" class="wednesday" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -399,14 +397,14 @@
                     <div class="wrapper-switch">
                         <div>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input id="thursday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="thur-start" type="text" required>
+                            <input onclick="checkThursday()" class="thursday" id="thur-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -418,7 +416,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="thur-stop" type="text" required>
+                            <input onclick="checkThursday()" class="thursday" id="thur-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -434,14 +432,14 @@
                     <div class="wrapper-switch">
                         <div>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input id="friday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="fri-start" type="text" required>
+                            <input onclick="checkFriday()" class="friday" id="fri-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -453,7 +451,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="fri-stop" type="text" required>
+                            <input onclick="checkFriday()" class="friday" id="fri-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>
@@ -469,14 +467,14 @@
                     <div class="wrapper-switch">
                         <div>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input id="saturday-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="sat-start" type="text" required>
+                            <input onclick="checkSaturday()" class="saturday" id="sat-start" type="text" required>
                             <div class="underline"></div>
                             <label>Start Time</label>
                         </div>
@@ -488,7 +486,7 @@
                     </div>
                     <div class="wrapper">
                         <div class="input-data">
-                            <input id="sat-stop" type="text" required>
+                            <input onclick="checkSaturday()" class="saturday" id="sat-stop" type="text" required>
                             <div class="underline"></div>
                             <label>End Time</label>
                         </div>

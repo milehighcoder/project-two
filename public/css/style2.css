@@ -24,7 +24,7 @@ p {
 
 h4 {
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 21px;
 }
@@ -34,6 +34,15 @@ h4 {
   margin-bottom: 20px;
   color: rgb(179, 179, 179);
   text-align: center;
+}
+
+.delete-icon {
+  color: #ea4335;
+}
+
+#trash-icon {
+  margin-top: 25px;
+  margin-left: 10px;
 }
 
 /* NAVBAR */
@@ -303,7 +312,7 @@ span.number {
 }
 
 .logout-wrapper {
-  position:relative;
+  position: relative;
   display: inline;
 }
 

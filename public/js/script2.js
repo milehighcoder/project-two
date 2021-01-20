@@ -169,21 +169,211 @@ function durationTime() {
 // TIME CARD END
 
 // CREATE SCHEDULE SWITCH
+//SUNDAY
 document.getElementById("sunday-switch").onchange = function () {
-  // document.getElementById("sun-start").disabled = !this.checked;
   document.getElementById("sun-start").value = "";
+  document.getElementById("sun-stop").value = "";
 };
 
-const sunStart = document.getElementById("sun-stop").innerHTML;
-
-console.log(sunStart);
-
-//create check function
-function check() {
+function checkSunday() {
+  // toggles on when input fields are clicked
   let inputs = document.getElementById("sunday-switch");
   inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("sunday-switch").onchange = function () {
+    document.getElementById("sun-start").value = "";
+    document.getElementById("sun-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("sun-start").value.length == 0) {
+        let inputs = document.getElementById("sunday-switch");
+        if (!e.target.closest(".sunday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+//MONDAY
+document.getElementById("monday-switch").onchange = function () {
+  document.getElementById("mon-start").value = "";
+  document.getElementById("mon-stop").value = "";
+};
+
+function checkMonday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("monday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("monday-switch").onchange = function () {
+    document.getElementById("mon-start").value = "";
+    document.getElementById("mon-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("mon-start").value.length == 0) {
+        let inputs = document.getElementById("monday-switch");
+        if (!e.target.closest(".monday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+//TUESDAY
+document.getElementById("tuesday-switch").onchange = function () {
+  document.getElementById("tues-start").value = "";
+  document.getElementById("tues-stop").value = "";
+};
+
+function checkTuesday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("tuesday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("tuesday-switch").onchange = function () {
+    document.getElementById("tues-start").value = "";
+    document.getElementById("tues-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("tues-start").value.length == 0) {
+        let inputs = document.getElementById("tuesday-switch");
+        if (!e.target.closest(".tuesday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
 }
 
-window.onload = function () {
-  window.addEventListener("load", check, false);
+//WEDNESDAY
+document.getElementById("wednesday-switch").onchange = function () {
+  document.getElementById("wed-start").value = "";
+  document.getElementById("wed-stop").value = "";
 };
+
+function checkWednesday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("wednesday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("wednesday-switch").onchange = function () {
+    document.getElementById("wed-start").value = "";
+    document.getElementById("wed-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("wed-start").value.length == 0) {
+        let inputs = document.getElementById("wednesday-switch");
+        if (!e.target.closest(".wednesday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+//THURSDAY
+document.getElementById("thursday-switch").onchange = function () {
+  document.getElementById("thur-start").value = "";
+  document.getElementById("thur-stop").value = "";
+};
+
+function checkThursday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("thursday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("thursday-switch").onchange = function () {
+    document.getElementById("thur-start").value = "";
+    document.getElementById("thur-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("thur-start").value.length == 0) {
+        let inputs = document.getElementById("thursday-switch");
+        if (!e.target.closest(".thursday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+//FRIDAY
+document.getElementById("friday-switch").onchange = function () {
+  document.getElementById("fri-start").value = "";
+  document.getElementById("fri-stop").value = "";
+};
+
+function checkFriday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("friday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("friday-switch").onchange = function () {
+    document.getElementById("fri-start").value = "";
+    document.getElementById("fri-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("fri-start").value.length == 0) {
+        let inputs = document.getElementById("friday-switch");
+        if (!e.target.closest(".friday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+//SATURDAY
+document.getElementById("saturday-switch").onchange = function () {
+  document.getElementById("sat-start").value = "";
+  document.getElementById("sat-stop").value = "";
+};
+
+function checkSaturday() {
+  // toggles on when input fields are clicked
+  let inputs = document.getElementById("saturday-switch");
+  inputs.checked = true;
+  // toggles off and empties input fields when switch is clicked
+  document.getElementById("saturday-switch").onchange = function () {
+    document.getElementById("sat-start").value = "";
+    document.getElementById("sat-stop").value = "";
+  };
+  // toggles off if clicked outside input fields
+  document.getElementById("Modal3").addEventListener(
+    "click",
+    (e) => {
+      if (document.getElementById("sat-start").value.length == 0) {
+        let inputs = document.getElementById("saturday-switch");
+        if (!e.target.closest(".saturday")) {
+          inputs.checked = false;
+        }
+      }
+    },
+    false
+  );
+}
+
+// window.onload = function () {
+//   window.addEventListener('load', check, false);
+// }

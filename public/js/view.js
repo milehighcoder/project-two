@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const editBtn = document.getElementById('edit-button');
     const saveBtn = document.getElementById('save-button');
     const addBtn = document.getElementById('add-button');
+    const cancelBtn = document.getElementById('cancel-button');
     const deleteBtn = document.getElementById('delete-schedule-button');
     const tdEls = document.querySelectorAll('td');
     const modal2 = document.getElementById('Modal2-content');
@@ -160,6 +161,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Add Button on Modal for 'Create Schedule'
     addBtn.addEventListener("click", () => {
         createSchedule();
+        modal2.style.display = "none";
+        outerModal.style.display = "none"
+    });
+
+    // Cancel Button on Modal for 'Create Schedule'
+    cancelBtn.addEventListener("click", () => {
         modal2.style.display = "none";
         outerModal.style.display = "none"
     });

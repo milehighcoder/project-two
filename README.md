@@ -6,6 +6,11 @@
 
 When We Clean allows hotel cleaning crew managers to easily manage their team's schedules in a simple, high powered web-based application.
 
+## Deployed Application
+
+* [Github Repository](https://github.com/milehighcoder/project-two/)
+* [When We Clean Deployed App](https://when-we-clean.herokuapp.com/)
+
 ## Table of Contents
 
 * [Version History](#version-history)

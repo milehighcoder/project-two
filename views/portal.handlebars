@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/clock-in-out.css">
+
 <!-- Navbar -->
 <div class="md-tabs">
     <div class="mobile-nav-bar title-bar">
@@ -5,7 +7,7 @@
             <img src="assets/img/when-we-clean-logo.png" alt="" class="imgHead">
             <ul id="nav-ul">
                 <!-- Logout Button -->
-                <li id="nav-li"><a class="label-text" href="">Logout</a></li>
+                <li id="nav-li"><a id="logout-link" class="label-text" href="">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -36,12 +38,12 @@
                 </div>
                 <!-- Clock In and Out Buttons -->
                 <div class="row">
-                    <a id="clock-in-button" class="button button-rounded-hover" onclick="startTimer(this)">
+                    <button id="clock-in-button" class="button button-rounded-hover" onclick="startTimer(this)">
                         <h4 id="clockIn" >IN</h4>
-                    </a>
-                    <a id="clock-out-button" class="button button-rounded-hover" onclick="resetTimer()">
+                    </button>
+                    <button id="clock-out-button" class="button button-rounded-hover" onclick="resetTimer()">
                         <h4 id="clockOut">OUT</h4>
-                    </a>
+                    </button>
                 </div>
         </div>
         <br>

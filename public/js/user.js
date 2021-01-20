@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const confirmNewPasswordField = document.getElementById(
     "confirm-new-password"
   );
+  const logoutButton = document.getElementById("logout-link");
 
   let userId;
 
@@ -148,8 +149,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
     window.location.href = "/portal";
   };
 
+  const logout = () => {
+    localStorage.clear();
+    window.location.href = "/";
+  };
+
   // showUpdateProfileButton.addEventListener("click", );
   getUserDetails();
   updateProfileButton.addEventListener("click", updateUserDetails);
   updatePasswordButton.addEventListener("click", changePassword);
+
+  logoutButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    logout();
+  });
 });

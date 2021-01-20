@@ -32,23 +32,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
       },
     })
       .then((response) => {
-        console.log("Response Status: ", response.status);
         if (response.status === 200) {
           return response.json();
         } else {
-          console.log("Throwing Error");
           throw new Error("UnAuthorized");
         }
       })
       .then((data) => {
-        console.log("data: ", data);
         const { first_name, last_name, email, phone, userId: id } = data;
-        console.log(
-          firstNameField,
-          lastNameField,
-          phoneNumberField,
-          emailField
-        );
         firstNameField.value = first_name;
         lastNameField.value = last_name;
         phoneNumberField.value = phone;

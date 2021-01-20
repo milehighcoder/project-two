@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   };
 
   const login = () => {
-    console.log("logging in");
     const email = emailField.value;
     const password = passwordField.value;
     fetch("/auth/login", {

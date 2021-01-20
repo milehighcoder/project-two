@@ -31,6 +31,9 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+// TODO this doesn't seem like the optimal place for the belongsTo
+db.TimeEntry.belongsTo(db.User);
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

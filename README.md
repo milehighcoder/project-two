@@ -55,6 +55,8 @@ Employee Portal
 
 ## Installation
 
+curl -vk -X POST -H "Content-Type: application/json" --data '{"start_timestamp":"2021-01-19 09:00:00", "end_timestamp":"2021-01-20 09:30:00"}' http://localhost:3000/timeCard
+
 ## Usage
 
 As a Manager, I want to view, create, delete, and update employee schedules so that I can organize my team more efficiently. As an Employee, I want to view my schedule, request changes, and clock in/out. This application uses the following technologies:

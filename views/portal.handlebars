@@ -19,7 +19,7 @@
             <form class="form-wrapper-time-card">
                 <div>
                     <h2>Time Card</h2>
-                    <p class="gray-subtitle-text">January 13, 2021</p>
+                    <p id="today-date" class="gray-subtitle-text">January 13, 2021</p>
                 </div>
                 <div class="row">
                     <div class="grid-x small-x">
@@ -36,10 +36,10 @@
                 <!-- Clock In and Out Buttons -->
                 <div class="row">
                     <a id="clock-in-button" class="button button-rounded-hover" onclick="startTimer(this)">
-                        <h4>IN</h4>
+                        <h4 id="clockIn" >IN</h4>
                     </a>
                     <a id="clock-out-button" class="button button-rounded-hover" onclick="resetTimer()">
-                        <h4>OUT</h4>
+                        <h4 id="clockOut">OUT</h4>
                     </a>
                 </div>
         </div>
@@ -47,16 +47,7 @@
         <!-- Manage Team Card (THIS WILL BE DELETED AT SOME POINT) -->
         <div class="translucent-form-overlay">
             <h2>Hours Logged</h2>
-            <ul>
-                <li>Sunday: 7 hours</li>
-                <li>Monday: 4 hours</li>
-                <li>Tuesday: 0 hours</li>
-                <li>Wednesday: 0 hours</li>
-                <li>Thursday: 8 hours</li>
-                <li>Friday: 8 hours</li>
-                <li>Saturday: 6 hours</li>
-                <li>Total: 33 hours</li>
-
+            <ul id="user-schedule">
             </ul>
         </div>
         <br>
@@ -508,7 +499,7 @@
         <div class="columns large-8">
             <!-- Date Display -->
             <span>
-                <h1>January 2021</h1>
+                <h1 id="main-time" class="main-time"></h1>
             </span>
             <!-- Dropdown Button -->
             <div class="dropdown">
@@ -583,8 +574,10 @@
         </div>
     </div>
 </div>
-
-
 <script src="js/script2.js" type="text/javascript"></script>
 <script src="js/user.js" type="text/javascript"></script>
 <script src="js/view.js" type="text/javascript"></script>
+<script src="js/timecard.js" type="text/javascript"></script>
+
+
+

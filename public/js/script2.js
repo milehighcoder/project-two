@@ -62,9 +62,20 @@ var h = "";
 var m = "";
 var s = "";
 var timer;
+var startTime;
+
+function formatDateString(datetime) {
+  var dateString = datetime.toISOString();
+  dateString = dateString.replace("T", " ");
+  dateString = dateString.substr(0, dateString.indexOf("."));
+  return dateString;
+}
 
 function startTimer(btn) {
   btn.setAttribute("disabled", "disabled");
+  startTime = new Date();
+  console.log(startTime);
+  alert("You've clocked in at: " + startTime);
   durationTime();
 }
 function stopTimer() {
@@ -73,7 +84,49 @@ function stopTimer() {
     .removeAttribute("disabled");
   clearTimeout(timer);
 }
+
+const postTimeEntry = () => {
+  const endTime = new Date();
+  const duration =
+    (new Date(endTime).getTime() - new Date(startTime).getTime()) /
+    (1000 * 60 * 60);
+  alert(
+    "You've clocked out at: " +
+      endTime +
+      "\nTotal duration is your shift was : " +
+      parseFloat(duration).toFixed(2) +
+      " hours"
+  );
+  const data = {
+    start_timestamp: formatDateString(startTime),
+    end_timestamp: formatDateString(endTime),
+  };
+  console.log("data", data);
+  fetch("/timeCard", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-token": localStorage.getItem("token"),
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error("UnAuthorized");
+      }
+    })
+    .catch((error) => {
+      if (error.message === "UnAuthorized") {
+        // TODO re-enable
+        //location.href = "/";
+      }
+    });
+};
+
 function resetTimer() {
+  postTimeEntry();
   document
     .getElementsByClassName("button button-rounded-hover")[0]
     .removeAttribute("disabled");
@@ -82,7 +135,7 @@ function resetTimer() {
   console.log(hrs);
   clearTimeout(timer);
 
-  display.innerHTML = "00:00:00";
+  // display.innerHTML = "00:00:00";
   secs = 0;
   mins = 0;
   hrs = 0;
@@ -105,7 +158,7 @@ function countTimer() {
   h = hrs ? (hrs > 9 ? hrs : "0" + hrs) : "00";
   m = mins ? (mins > 9 ? mins : "0" + mins) : "00";
   s = secs > 9 ? secs : "0" + secs;
-  display.innerHTML = h + ":" + m + ":" + s;
+  // display.innerHTML = h + ":" + m + ":" + s;
   durationTime();
 }
 function durationTime() {
@@ -125,12 +178,12 @@ const sunStart = document.getElementById("sun-stop").innerHTML;
 
 console.log(sunStart);
 
-//create check function 
+//create check function
 function check() {
-  let inputs = document.getElementById('sunday-switch');
+  let inputs = document.getElementById("sunday-switch");
   inputs.checked = true;
 }
 
-window.onload = function() {
-  window.addEventListener('load', check, false);
-}
+window.onload = function () {
+  window.addEventListener("load", check, false);
+};

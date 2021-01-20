@@ -7,6 +7,7 @@ const db = require("../models");
 module.exports = function (app) {
   // GET route for getting all of the employees
   app.post("/auth/login", async (req, res) => {
+    console.log(db.User)
     try {
       const user = await db.User.findOne({
         where: { email: req.body.email },

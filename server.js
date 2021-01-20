@@ -71,6 +71,16 @@ app.get("/me", apiAuth, (req, res) => {
   return res.json(user);
 });
 
+const {
+  saveTimeEntry,
+  getUserWeek,
+  populateEntries,
+} = require("./controllers/time.controller");
+
+app.post("/timeCard", apiAuth, saveTimeEntry);
+app.get("/getUserWeek", apiAuth, getUserWeek);
+app.post("/populateEntries", populateEntries);
+
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));

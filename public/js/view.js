@@ -189,6 +189,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Delete Button on Dropdown Menu to remove Schedule
     deleteBtn.addEventListener("click", () => {
         console.log("clicked delete");
+        const delIcons = document.getElementsByClassName('fa-trash-alt');
+        const delArray = Array.from(delIcons);
+        console.log(delArray)
+        delArray.forEach((elem) => {
+            elem.style.display = 'block'
+        })
+
+
         deleteSchedule(e);
     });
 

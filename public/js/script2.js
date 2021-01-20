@@ -3,6 +3,14 @@ var modal = document.getElementsByClassName("modal");
 var btn = document.getElementsByClassName("myBtn");
 var span = document.getElementsByClassName("close");
 
+const clockInButton = document.getElementById("clock-in-button");
+const clockOutButton = document.getElementById("clock-out-button");
+
+// clockInButton.removeAttribute("disabled");
+// clockInButton.classList.toggle("clock-in-out-disabled");
+clockOutButton.disabled = true;
+clockOutButton.classList.toggle("clock-in-out-disabled");
+
 btn[0].onclick = function () {
   modal[0].style.display = "block";
 };
@@ -77,8 +85,16 @@ function startTimer(btn) {
   console.log(startTime);
   alert("You've clocked in at: " + startTime);
   durationTime();
+  clockInButton.disabled = true;
+  clockInButton.classList.toggle("clock-in-out-disabled");
+  clockOutButton.removeAttribute("disabled");
+  clockOutButton.classList.toggle("clock-in-out-disabled");
 }
 function stopTimer() {
+  clockInButton.removeAttribute("disabled");
+  clockInButton.classList.toggle("clock-in-out-disabled");
+  clockOutButton.disabled = true;
+  clockOutButton.classList.toggle("clock-in-out-disabled");
   document
     .getElementsByClassName("button button-rounded-hover")[0]
     .removeAttribute("disabled");

@@ -206,6 +206,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
       } else {
         elem.className = "calendar-edit-gray";
       }
+    // Delete Button on Dropdown Menu to remove Schedule
+    deleteBtn.addEventListener("click", () => {
+        console.log("clicked delete");
+        const delIcons = document.getElementsByClassName('fa-trash-alt');
+        const delArray = Array.from(delIcons);
+        console.log(delArray)
+        delArray.forEach((elem) => {
+            elem.style.display = 'block'
+        })
+
+
+        deleteSchedule(e);
     });
     // shows 'save' button during editing process (until clicked)
     saveBtn.style.display = "block";

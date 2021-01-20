@@ -6,13 +6,22 @@ body {
   position: absolute;
 }
 
+p {
+  color: white;
+  font-weight: 600;
+}
+
+.logo {
+  text-align: center;
+}
+
 .translucent-form-overlay {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-0%, 25%);
   width: 30em;
-  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  margin-top: -5em; /*set to a negative number 1/2 of your height*/
   margin-left: -15em; /*set to a negative number 1/2 of your width*/
   border: 1px solid #ccc;
   max-width: 500px;
@@ -22,6 +31,7 @@ body {
   color: #fefefe;
   display: inline-block;
   border-radius: 5%;
+  border: none;
 }
 
 .translucent-form-overlay .columns.row {
@@ -144,6 +154,14 @@ body {
   /* margin-bottom: 1rem; */
 }
 
+#sign-in-form-login-btn {
+  margin-top: 25px;
+  border: none;
+  background-color: #4385f4;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
 .sign-in-form input {
   color: rgb(0, 0, 0);
 }
@@ -169,6 +187,8 @@ body {
   width: 100%;
   padding: 1rem;
   transition: all ease 0.4s;
+  text-transform: none !important;
+  font-size: 18px;
 }
 
 .sign-in-form-button:hover {
@@ -252,4 +272,29 @@ body {
 
 .button-group-option .button + .button {
   margin-left: 0.35rem;
+}
+
+#create-account {
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  text-align: left;
+  margin-left: 20px;
+  text-transform: none !important;
+}
+
+.form-input {
+  border-radius: 30px;
+  height: 45px;
+  margin-bottom: 20px;
+}
+
+p2 {
+  color: silver;
+}
+
+p2:hover {
+  color: white;
 }

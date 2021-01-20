@@ -3,13 +3,14 @@ body {
 }
 
 #logo {
- 
+  position: absolute;
 }
 
 .translucent-form-overlay {
-
-  top: 35%;
+  position: relative;
+  top: 50%;
   left: 50%;
+  transform: translate(-0%, 25%);
   width: 30em;
   margin-top: -9em; /*set to a negative number 1/2 of your height*/
   margin-left: -15em; /*set to a negative number 1/2 of your width*/

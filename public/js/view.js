@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
-                        console.log(`Successfully removed employe #${fetchId}`);
+                        console.log(`Successfully removed employee #${fetchId}`);
                     });
             }
             // refresh window to update schedule

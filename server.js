@@ -32,6 +32,7 @@ app.engine(
     handlebars: allowInsecurePrototypeAccess(Handlebars),
   })
 );
+
 app.set("view engine", "handlebars");
 
 require("./routes/authRoutes")(app);
@@ -49,6 +50,7 @@ app.get("/register", (req, res) => {
   // res.sendFile(path.join(__dirname, "./public/register.html"));
 });
 
+// render all employees.
 app.get("/portal", (req, res) => {
   db.Employee.findAll().then((result) => {
     const hbsObject = {

@@ -6,10 +6,20 @@ var span = document.getElementsByClassName("close");
 const clockInButton = document.getElementById("clock-in-button");
 const clockOutButton = document.getElementById("clock-out-button");
 
+const storedStartTime = sessionStorage.getItem("startTime");
+if (storedStartTime) {
+  startTime = new Date(storedStartTime);
+  clockInButton.disabled = true;
+  clockInButton.classList.toggle("clock-in-out-disabled");
+  clockOutButton.removeAttribute("disabled");
+} else {
+  clockOutButton.disabled = true;
+  clockInButton.removeAttribute("disabled");
+  clockOutButton.classList.toggle("clock-in-out-disabled");
+}
+
 // clockInButton.removeAttribute("disabled");
 // clockInButton.classList.toggle("clock-in-out-disabled");
-clockOutButton.disabled = true;
-clockOutButton.classList.toggle("clock-in-out-disabled");
 
 btn[0].onclick = function () {
   modal[0].style.display = "block";
@@ -82,6 +92,7 @@ function formatDateString(datetime) {
 function startTimer(btn) {
   btn.setAttribute("disabled", "disabled");
   startTime = new Date();
+  sessionStorage.setItem("startTime", startTime);
   console.log(startTime);
   alert("You've clocked in at: " + startTime);
   durationTime();
@@ -142,6 +153,7 @@ const postTimeEntry = () => {
 };
 
 function resetTimer() {
+  sessionStorage.removeItem("startTime");
   postTimeEntry();
   document
     .getElementsByClassName("button button-rounded-hover")[0]

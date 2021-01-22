@@ -55,7 +55,6 @@ As a Manager, I want to view, create, delete, and update employee schedules so t
 * Express.js
 * MySQL
 * Sequelize ORM
-* Passport
 * Heroku
 
 ## Contributing
